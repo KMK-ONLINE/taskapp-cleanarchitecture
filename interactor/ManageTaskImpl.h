@@ -1,0 +1,18 @@
+//
+//  ManageTask.h
+//  tasks
+//
+//  Created by Woi on 2/23/18.
+//  Copyright © 2018 kmklabs. All rights reserved.
+//
+
+#import <Foundation/Foundation.h>
+#import "TaskListingItem.h"
+#import "ManageTask.h"
+#import "TaskRepository.h"
+
+@interface ManageTaskImpl : NSObject<ManageTask>
+
+-(instancetype)initWithTaskRepository: (id<TaskRepository>)taskRepository;
+
+@end

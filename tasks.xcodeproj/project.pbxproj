@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		A001316D203AD17F0048E565 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A001316C203AD17F0048E565 /* AppDelegate.m */; };
-		A0013170203AD17F0048E565 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A001316F203AD17F0048E565 /* ViewController.m */; };
 		A0013173203AD17F0048E565 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A0013171203AD17F0048E565 /* Main.storyboard */; };
 		A0013176203AD17F0048E565 /* tasks.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A0013174203AD17F0048E565 /* tasks.xcdatamodeld */; };
 		A0013178203AD17F0048E565 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A0013177203AD17F0048E565 /* Assets.xcassets */; };
@@ -17,6 +16,10 @@
 		A0013193203AD17F0048E565 /* tasksUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = A0013192203AD17F0048E565 /* tasksUITests.m */; };
 		A0B30B23203ADBF800645AD6 /* TaskTest.m in Sources */ = {isa = PBXBuildFile; fileRef = A0B30B22203ADBF800645AD6 /* TaskTest.m */; };
 		A0B30B26203ADC3C00645AD6 /* Task.m in Sources */ = {isa = PBXBuildFile; fileRef = A0B30B25203ADC3C00645AD6 /* Task.m */; };
+		F759250C20401188006C96CD /* MyTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F759250B20401188006C96CD /* MyTableViewController.m */; };
+		F7592512204016FB006C96CD /* ManageTaskTest.m in Sources */ = {isa = PBXBuildFile; fileRef = F7592511204016FB006C96CD /* ManageTaskTest.m */; };
+		F759251520401889006C96CD /* TaskListingItem.m in Sources */ = {isa = PBXBuildFile; fileRef = F759251420401889006C96CD /* TaskListingItem.m */; };
+		F75925172040214A006C96CD /* ManageTaskImpl.m in Sources */ = {isa = PBXBuildFile; fileRef = F75925162040214A006C96CD /* ManageTaskImpl.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,8 +43,6 @@
 		A0013168203AD17F0048E565 /* tasks.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = tasks.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A001316B203AD17F0048E565 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		A001316C203AD17F0048E565 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		A001316E203AD17F0048E565 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		A001316F203AD17F0048E565 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		A0013172203AD17F0048E565 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		A0013175203AD17F0048E565 /* tasks.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = tasks.xcdatamodel; sourceTree = "<group>"; };
 		A0013177203AD17F0048E565 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -56,6 +57,15 @@
 		A0B30B22203ADBF800645AD6 /* TaskTest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TaskTest.m; sourceTree = "<group>"; };
 		A0B30B24203ADC3C00645AD6 /* Task.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Task.h; sourceTree = "<group>"; };
 		A0B30B25203ADC3C00645AD6 /* Task.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Task.m; sourceTree = "<group>"; };
+		F759250A20401188006C96CD /* MyTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyTableViewController.h; sourceTree = "<group>"; };
+		F759250B20401188006C96CD /* MyTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyTableViewController.m; sourceTree = "<group>"; };
+		F759250E204016E2006C96CD /* ManageTaskImpl.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ManageTaskImpl.h; sourceTree = "<group>"; };
+		F7592511204016FB006C96CD /* ManageTaskTest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ManageTaskTest.m; sourceTree = "<group>"; };
+		F759251320401889006C96CD /* TaskListingItem.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TaskListingItem.h; sourceTree = "<group>"; };
+		F759251420401889006C96CD /* TaskListingItem.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TaskListingItem.m; sourceTree = "<group>"; };
+		F75925162040214A006C96CD /* ManageTaskImpl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ManageTaskImpl.m; sourceTree = "<group>"; };
+		F7592518204021EC006C96CD /* TaskRepository.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TaskRepository.h; sourceTree = "<group>"; };
+		F759251A2043B4AB006C96CD /* ManageTask.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ManageTask.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +96,7 @@
 		A001315F203AD17F0048E565 = {
 			isa = PBXGroup;
 			children = (
+				F759250D204016A1006C96CD /* interactor */,
 				A0B30B21203AD7E200645AD6 /* entity */,
 				A001316A203AD17F0048E565 /* tasks */,
 				A0013186203AD17F0048E565 /* tasksTests */,
@@ -109,14 +120,14 @@
 			children = (
 				A001316B203AD17F0048E565 /* AppDelegate.h */,
 				A001316C203AD17F0048E565 /* AppDelegate.m */,
-				A001316E203AD17F0048E565 /* ViewController.h */,
-				A001316F203AD17F0048E565 /* ViewController.m */,
 				A0013171203AD17F0048E565 /* Main.storyboard */,
 				A0013177203AD17F0048E565 /* Assets.xcassets */,
 				A0013179203AD17F0048E565 /* LaunchScreen.storyboard */,
 				A001317C203AD17F0048E565 /* Info.plist */,
 				A001317D203AD17F0048E565 /* main.m */,
 				A0013174203AD17F0048E565 /* tasks.xcdatamodeld */,
+				F759250A20401188006C96CD /* MyTableViewController.h */,
+				F759250B20401188006C96CD /* MyTableViewController.m */,
 			);
 			path = tasks;
 			sourceTree = "<group>";
@@ -126,6 +137,7 @@
 			children = (
 				A0013189203AD17F0048E565 /* Info.plist */,
 				A0B30B22203ADBF800645AD6 /* TaskTest.m */,
+				F7592511204016FB006C96CD /* ManageTaskTest.m */,
 			);
 			path = tasksTests;
 			sourceTree = "<group>";
@@ -146,6 +158,27 @@
 				A0B30B25203ADC3C00645AD6 /* Task.m */,
 			);
 			path = entity;
+			sourceTree = "<group>";
+		};
+		F759250D204016A1006C96CD /* interactor */ = {
+			isa = PBXGroup;
+			children = (
+				F75925192043B436006C96CD /* api */,
+				F75925162040214A006C96CD /* ManageTaskImpl.m */,
+				F759250E204016E2006C96CD /* ManageTaskImpl.h */,
+				F759251320401889006C96CD /* TaskListingItem.h */,
+				F759251420401889006C96CD /* TaskListingItem.m */,
+				F7592518204021EC006C96CD /* TaskRepository.h */,
+			);
+			path = interactor;
+			sourceTree = "<group>";
+		};
+		F75925192043B436006C96CD /* api */ = {
+			isa = PBXGroup;
+			children = (
+				F759251A2043B4AB006C96CD /* ManageTask.h */,
+			);
+			name = api;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -282,8 +315,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				A0B30B26203ADC3C00645AD6 /* Task.m in Sources */,
-				A0013170203AD17F0048E565 /* ViewController.m in Sources */,
+				F759251520401889006C96CD /* TaskListingItem.m in Sources */,
+				F759250C20401188006C96CD /* MyTableViewController.m in Sources */,
 				A001316D203AD17F0048E565 /* AppDelegate.m in Sources */,
+				F75925172040214A006C96CD /* ManageTaskImpl.m in Sources */,
 				A001317E203AD17F0048E565 /* main.m in Sources */,
 				A0013176203AD17F0048E565 /* tasks.xcdatamodeld in Sources */,
 			);
@@ -294,6 +329,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A0B30B23203ADBF800645AD6 /* TaskTest.m in Sources */,
+				F7592512204016FB006C96CD /* ManageTaskTest.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -449,6 +485,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = QZ5K73KDV3;
 				INFOPLIST_FILE = tasks/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.kmk.tasks;
@@ -462,6 +499,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = QZ5K73KDV3;
 				INFOPLIST_FILE = tasks/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.kmk.tasks;
@@ -475,6 +513,7 @@
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = QZ5K73KDV3;
 				INFOPLIST_FILE = tasksTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.kmk.tasksTests;
@@ -489,6 +528,7 @@
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = QZ5K73KDV3;
 				INFOPLIST_FILE = tasksTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.kmk.tasksTests;
@@ -502,6 +542,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = QZ5K73KDV3;
 				INFOPLIST_FILE = tasksUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.kmk.tasksUITests;
@@ -515,6 +556,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = QZ5K73KDV3;
 				INFOPLIST_FILE = tasksUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.kmk.tasksUITests;
