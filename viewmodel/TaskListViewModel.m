@@ -41,13 +41,22 @@
 -(NSArray<TaskListItemViewModel*>*) createTaskVMsFrom:(NSArray<TaskListingItem*>*) taskListing {
     NSMutableArray<TaskListItemViewModel*>* taskVMs = [NSMutableArray new];
 
-    for(TaskListingItem* taskListingItem in taskListing) {
-        TaskListItemViewModel* taskVM = [TaskListItemViewModel new];
-        taskVM.title = taskListingItem.title;
+    for(TaskListingItem* taskItem in taskListing) {
+        TaskListItemViewModel* taskVM = [self createTaskVMFrom:taskItem];
         [taskVMs addObject:taskVM];
     }
     
     return taskVMs;
+}
+
+-(TaskListItemViewModel*) createTaskVMFrom:(TaskListingItem*) taskItem {
+    
+    TaskListItemViewModel* taskVM = [TaskListItemViewModel new];
+
+    taskVM.title = taskItem.title;
+    taskVM.isCompleted = taskItem.isCompleted;
+   
+    return taskVM;
 }
 
 @end

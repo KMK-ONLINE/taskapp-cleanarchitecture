@@ -11,5 +11,6 @@
 @interface TaskListingItem : NSObject
 
 @property(nonatomic, strong) NSString* title;
+@property(nonatomic, assign) BOOL isCompleted;
 
 @end

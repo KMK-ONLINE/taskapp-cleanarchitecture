@@ -29,9 +29,10 @@
 -(void) seedWithExampleTasks {
     Task* task1 = [Task new];
     task1.title = @"Example task 1";
-    
+
     Task* task2 = [Task new];
     task2.title = @"Example task 2";
+    [task2 toggleCompleted];
 
     [self.tasks addObjectsFromArray:@[task1, task2]];
 }

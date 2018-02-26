@@ -16,6 +16,14 @@
 
 -(void) setTaskVM:(TaskListItemViewModel*) taskVM {
     self.textLabel.text = taskVM.title;
+    [self setChecked:taskVM.isCompleted];
+    
+}
+
+-(void) setChecked:(BOOL) isCompleted {
+    self.accessoryType = isCompleted ?
+                         UITableViewCellAccessoryCheckmark :
+                         UITableViewCellAccessoryNone;
 }
 
 @end

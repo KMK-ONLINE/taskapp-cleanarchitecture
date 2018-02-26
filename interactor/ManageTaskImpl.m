@@ -41,6 +41,7 @@
     TaskListingItem* taskListingItem = [TaskListingItem new];
 
     taskListingItem.title = task.title;
+    taskListingItem.isCompleted = task.isCompleted;
 
     return taskListingItem;
 }
