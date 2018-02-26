@@ -1,5 +1,5 @@
 //
-//  ManageTask.h
+//  TaskListItemViewModel.h
 //  tasks
 //
 //  Created by Woi on 2/26/18.
@@ -7,10 +7,9 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "TaskListingItem.h"
 
-@protocol ManageTask <NSObject>
+@interface TaskListItemViewModel : NSObject
 
--(NSArray<TaskListingItem*>*) getAllTasks;
+@property(nonatomic, strong) NSString* title;
 
 @end

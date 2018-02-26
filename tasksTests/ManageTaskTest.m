@@ -18,7 +18,13 @@
 @implementation TaskRepositoryImpl
 
 -(NSArray<Task*>*) getAllTasks {
-    return @[[Task new], [Task new]];
+    Task* task1 = [Task new];
+    task1.title = @"task 1";
+    
+    Task* task2 = [Task new];
+    task2.title = @"task 2";
+    
+    return @[task1, task2];
 }
 
 @end
@@ -37,6 +43,7 @@
     NSArray<TaskListingItem*>* tasks = [manageTask getAllTasks];
     
     XCTAssertEqual(tasks.count, 2);
+    XCTAssertTrue([tasks.firstObject.title isEqualToString:@"task 1"]);
 }
 
 @end

@@ -15,9 +15,10 @@
 
 @implementation TaskTest
 
-- (void) testStartWithIncomplete {
+- (void) testInitialValue{
     Task* task = [Task new];
     XCTAssertFalse(task.isCompleted);
+    XCTAssertTrue([task.title isEqualToString:@"New Task"]);
 }
 
 - (void) testToggleCompleted {

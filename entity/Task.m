@@ -21,6 +21,7 @@
     self = [super init];
     if (self) {
         self.completed = false;
+        self.title = @"New Task";
     }
     return self;
 }

@@ -10,7 +10,8 @@
 
 @interface Task : NSObject
 
-@property (nonatomic, assign) BOOL isCompleted;
+@property(nonatomic, strong) NSString* title;
+@property(nonatomic, assign) BOOL isCompleted;
 
 -(void) toggleCompleted;
 

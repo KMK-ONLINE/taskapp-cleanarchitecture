@@ -20,6 +20,9 @@
 		F7592512204016FB006C96CD /* ManageTaskTest.m in Sources */ = {isa = PBXBuildFile; fileRef = F7592511204016FB006C96CD /* ManageTaskTest.m */; };
 		F759251520401889006C96CD /* TaskListingItem.m in Sources */ = {isa = PBXBuildFile; fileRef = F759251420401889006C96CD /* TaskListingItem.m */; };
 		F75925172040214A006C96CD /* ManageTaskImpl.m in Sources */ = {isa = PBXBuildFile; fileRef = F75925162040214A006C96CD /* ManageTaskImpl.m */; };
+		F759251E2043B7F3006C96CD /* TaskListViewModelTest.m in Sources */ = {isa = PBXBuildFile; fileRef = F759251D2043B7F3006C96CD /* TaskListViewModelTest.m */; };
+		F75925222043B88C006C96CD /* TaskListViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F75925212043B88C006C96CD /* TaskListViewModel.m */; };
+		F75925252043BF9E006C96CD /* TaskListItemViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F75925242043BF9E006C96CD /* TaskListItemViewModel.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -66,6 +69,11 @@
 		F75925162040214A006C96CD /* ManageTaskImpl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ManageTaskImpl.m; sourceTree = "<group>"; };
 		F7592518204021EC006C96CD /* TaskRepository.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TaskRepository.h; sourceTree = "<group>"; };
 		F759251A2043B4AB006C96CD /* ManageTask.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ManageTask.h; sourceTree = "<group>"; };
+		F759251D2043B7F3006C96CD /* TaskListViewModelTest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TaskListViewModelTest.m; sourceTree = "<group>"; };
+		F75925202043B88C006C96CD /* TaskListViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TaskListViewModel.h; sourceTree = "<group>"; };
+		F75925212043B88C006C96CD /* TaskListViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TaskListViewModel.m; sourceTree = "<group>"; };
+		F75925232043BF9E006C96CD /* TaskListItemViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TaskListItemViewModel.h; sourceTree = "<group>"; };
+		F75925242043BF9E006C96CD /* TaskListItemViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TaskListItemViewModel.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,6 +104,7 @@
 		A001315F203AD17F0048E565 = {
 			isa = PBXGroup;
 			children = (
+				F759251F2043B85E006C96CD /* viewmodel */,
 				F759250D204016A1006C96CD /* interactor */,
 				A0B30B21203AD7E200645AD6 /* entity */,
 				A001316A203AD17F0048E565 /* tasks */,
@@ -138,6 +147,7 @@
 				A0013189203AD17F0048E565 /* Info.plist */,
 				A0B30B22203ADBF800645AD6 /* TaskTest.m */,
 				F7592511204016FB006C96CD /* ManageTaskTest.m */,
+				F759251D2043B7F3006C96CD /* TaskListViewModelTest.m */,
 			);
 			path = tasksTests;
 			sourceTree = "<group>";
@@ -179,6 +189,17 @@
 				F759251A2043B4AB006C96CD /* ManageTask.h */,
 			);
 			name = api;
+			sourceTree = "<group>";
+		};
+		F759251F2043B85E006C96CD /* viewmodel */ = {
+			isa = PBXGroup;
+			children = (
+				F75925202043B88C006C96CD /* TaskListViewModel.h */,
+				F75925212043B88C006C96CD /* TaskListViewModel.m */,
+				F75925232043BF9E006C96CD /* TaskListItemViewModel.h */,
+				F75925242043BF9E006C96CD /* TaskListItemViewModel.m */,
+			);
+			path = viewmodel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -315,8 +336,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				A0B30B26203ADC3C00645AD6 /* Task.m in Sources */,
+				F75925222043B88C006C96CD /* TaskListViewModel.m in Sources */,
 				F759251520401889006C96CD /* TaskListingItem.m in Sources */,
 				F759250C20401188006C96CD /* MyTableViewController.m in Sources */,
+				F75925252043BF9E006C96CD /* TaskListItemViewModel.m in Sources */,
 				A001316D203AD17F0048E565 /* AppDelegate.m in Sources */,
 				F75925172040214A006C96CD /* ManageTaskImpl.m in Sources */,
 				A001317E203AD17F0048E565 /* main.m in Sources */,
@@ -329,6 +352,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A0B30B23203ADBF800645AD6 /* TaskTest.m in Sources */,
+				F759251E2043B7F3006C96CD /* TaskListViewModelTest.m in Sources */,
 				F7592512204016FB006C96CD /* ManageTaskTest.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

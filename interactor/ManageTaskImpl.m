@@ -39,9 +39,9 @@
 
 -(TaskListingItem*) createTaskListingItemFrom:(Task*) task {
     TaskListingItem* taskListingItem = [TaskListingItem new];
-    
-    //TODO : transform value
-    
+
+    taskListingItem.title = task.title;
+
     return taskListingItem;
 }
 

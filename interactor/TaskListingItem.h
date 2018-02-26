@@ -10,4 +10,6 @@
 
 @interface TaskListingItem : NSObject
 
+@property(nonatomic, strong) NSString* title;
+
 @end
