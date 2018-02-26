@@ -16,7 +16,10 @@
 		A0013193203AD17F0048E565 /* tasksUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = A0013192203AD17F0048E565 /* tasksUITests.m */; };
 		A0B30B23203ADBF800645AD6 /* TaskTest.m in Sources */ = {isa = PBXBuildFile; fileRef = A0B30B22203ADBF800645AD6 /* TaskTest.m */; };
 		A0B30B26203ADC3C00645AD6 /* Task.m in Sources */ = {isa = PBXBuildFile; fileRef = A0B30B25203ADC3C00645AD6 /* Task.m */; };
-		F759250C20401188006C96CD /* MyTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F759250B20401188006C96CD /* MyTableViewController.m */; };
+		F70F7AA22043EE6A00692058 /* TaskTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F70F7AA12043EE6A00692058 /* TaskTableViewCell.m */; };
+		F70F7AA52043F17F00692058 /* TaskListViewModelFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = F70F7AA42043F17F00692058 /* TaskListViewModelFactory.m */; };
+		F70F7AA82043F47600692058 /* ManageTaskFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = F70F7AA72043F47600692058 /* ManageTaskFactory.m */; };
+		F759250C20401188006C96CD /* TasksTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F759250B20401188006C96CD /* TasksTableViewController.m */; };
 		F7592512204016FB006C96CD /* ManageTaskTest.m in Sources */ = {isa = PBXBuildFile; fileRef = F7592511204016FB006C96CD /* ManageTaskTest.m */; };
 		F759251520401889006C96CD /* TaskListingItem.m in Sources */ = {isa = PBXBuildFile; fileRef = F759251420401889006C96CD /* TaskListingItem.m */; };
 		F75925172040214A006C96CD /* ManageTaskImpl.m in Sources */ = {isa = PBXBuildFile; fileRef = F75925162040214A006C96CD /* ManageTaskImpl.m */; };
@@ -60,8 +63,14 @@
 		A0B30B22203ADBF800645AD6 /* TaskTest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TaskTest.m; sourceTree = "<group>"; };
 		A0B30B24203ADC3C00645AD6 /* Task.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Task.h; sourceTree = "<group>"; };
 		A0B30B25203ADC3C00645AD6 /* Task.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Task.m; sourceTree = "<group>"; };
-		F759250A20401188006C96CD /* MyTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyTableViewController.h; sourceTree = "<group>"; };
-		F759250B20401188006C96CD /* MyTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyTableViewController.m; sourceTree = "<group>"; };
+		F70F7AA02043EE6A00692058 /* TaskTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TaskTableViewCell.h; sourceTree = "<group>"; };
+		F70F7AA12043EE6A00692058 /* TaskTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TaskTableViewCell.m; sourceTree = "<group>"; };
+		F70F7AA32043F17F00692058 /* TaskListViewModelFactory.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TaskListViewModelFactory.h; sourceTree = "<group>"; };
+		F70F7AA42043F17F00692058 /* TaskListViewModelFactory.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TaskListViewModelFactory.m; sourceTree = "<group>"; };
+		F70F7AA62043F47600692058 /* ManageTaskFactory.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ManageTaskFactory.h; sourceTree = "<group>"; };
+		F70F7AA72043F47600692058 /* ManageTaskFactory.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ManageTaskFactory.m; sourceTree = "<group>"; };
+		F759250A20401188006C96CD /* TasksTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TasksTableViewController.h; sourceTree = "<group>"; };
+		F759250B20401188006C96CD /* TasksTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TasksTableViewController.m; sourceTree = "<group>"; };
 		F759250E204016E2006C96CD /* ManageTaskImpl.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ManageTaskImpl.h; sourceTree = "<group>"; };
 		F7592511204016FB006C96CD /* ManageTaskTest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ManageTaskTest.m; sourceTree = "<group>"; };
 		F759251320401889006C96CD /* TaskListingItem.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TaskListingItem.h; sourceTree = "<group>"; };
@@ -104,9 +113,9 @@
 		A001315F203AD17F0048E565 = {
 			isa = PBXGroup;
 			children = (
-				F759251F2043B85E006C96CD /* viewmodel */,
 				F759250D204016A1006C96CD /* interactor */,
 				A0B30B21203AD7E200645AD6 /* entity */,
+				F759251F2043B85E006C96CD /* viewmodel */,
 				A001316A203AD17F0048E565 /* tasks */,
 				A0013186203AD17F0048E565 /* tasksTests */,
 				A0013191203AD17F0048E565 /* tasksUITests */,
@@ -135,8 +144,10 @@
 				A001317C203AD17F0048E565 /* Info.plist */,
 				A001317D203AD17F0048E565 /* main.m */,
 				A0013174203AD17F0048E565 /* tasks.xcdatamodeld */,
-				F759250A20401188006C96CD /* MyTableViewController.h */,
-				F759250B20401188006C96CD /* MyTableViewController.m */,
+				F759250A20401188006C96CD /* TasksTableViewController.h */,
+				F759250B20401188006C96CD /* TasksTableViewController.m */,
+				F70F7AA02043EE6A00692058 /* TaskTableViewCell.h */,
+				F70F7AA12043EE6A00692058 /* TaskTableViewCell.m */,
 			);
 			path = tasks;
 			sourceTree = "<group>";
@@ -170,10 +181,29 @@
 			path = entity;
 			sourceTree = "<group>";
 		};
+		F70F7AA92043F54A00692058 /* factory */ = {
+			isa = PBXGroup;
+			children = (
+				F70F7AA62043F47600692058 /* ManageTaskFactory.h */,
+				F70F7AA72043F47600692058 /* ManageTaskFactory.m */,
+			);
+			path = factory;
+			sourceTree = "<group>";
+		};
+		F70F7AAA2043F56A00692058 /* factory */ = {
+			isa = PBXGroup;
+			children = (
+				F70F7AA32043F17F00692058 /* TaskListViewModelFactory.h */,
+				F70F7AA42043F17F00692058 /* TaskListViewModelFactory.m */,
+			);
+			name = factory;
+			sourceTree = "<group>";
+		};
 		F759250D204016A1006C96CD /* interactor */ = {
 			isa = PBXGroup;
 			children = (
 				F75925192043B436006C96CD /* api */,
+				F70F7AA92043F54A00692058 /* factory */,
 				F75925162040214A006C96CD /* ManageTaskImpl.m */,
 				F759250E204016E2006C96CD /* ManageTaskImpl.h */,
 				F759251320401889006C96CD /* TaskListingItem.h */,
@@ -194,6 +224,7 @@
 		F759251F2043B85E006C96CD /* viewmodel */ = {
 			isa = PBXGroup;
 			children = (
+				F70F7AAA2043F56A00692058 /* factory */,
 				F75925202043B88C006C96CD /* TaskListViewModel.h */,
 				F75925212043B88C006C96CD /* TaskListViewModel.m */,
 				F75925232043BF9E006C96CD /* TaskListItemViewModel.h */,
@@ -337,13 +368,16 @@
 			files = (
 				A0B30B26203ADC3C00645AD6 /* Task.m in Sources */,
 				F75925222043B88C006C96CD /* TaskListViewModel.m in Sources */,
+				F70F7AA82043F47600692058 /* ManageTaskFactory.m in Sources */,
+				F70F7AA22043EE6A00692058 /* TaskTableViewCell.m in Sources */,
 				F759251520401889006C96CD /* TaskListingItem.m in Sources */,
-				F759250C20401188006C96CD /* MyTableViewController.m in Sources */,
+				F759250C20401188006C96CD /* TasksTableViewController.m in Sources */,
 				F75925252043BF9E006C96CD /* TaskListItemViewModel.m in Sources */,
 				A001316D203AD17F0048E565 /* AppDelegate.m in Sources */,
 				F75925172040214A006C96CD /* ManageTaskImpl.m in Sources */,
 				A001317E203AD17F0048E565 /* main.m in Sources */,
 				A0013176203AD17F0048E565 /* tasks.xcdatamodeld in Sources */,
+				F70F7AA52043F17F00692058 /* TaskListViewModelFactory.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

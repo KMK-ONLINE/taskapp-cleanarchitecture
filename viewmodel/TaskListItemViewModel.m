@@ -10,4 +10,13 @@
 
 @implementation TaskListItemViewModel
 
+- (instancetype)init
+{
+    self = [super init];
+    if (self) {
+        self.title = @"";
+    }
+    return self;
+}
+
 @end

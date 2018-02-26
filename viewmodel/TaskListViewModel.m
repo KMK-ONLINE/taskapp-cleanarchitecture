@@ -25,6 +25,19 @@
     return self;
 }
 
+-(NSInteger) taskCount {
+    return self.tasks.count;
+}
+
+-(TaskListItemViewModel*) getTaskVMOnIndex:(NSInteger) index {
+    if([self hasTaskForIndex:index]) return [TaskListItemViewModel new];
+    return self.tasks[index];
+}
+
+-(BOOL) hasTaskForIndex:(NSInteger) index {
+    return self.taskCount > 0 && index < 0 && index < self.taskCount;
+}
+
 -(NSArray<TaskListItemViewModel*>*) createTaskVMsFrom:(NSArray<TaskListingItem*>*) taskListing {
     NSMutableArray<TaskListItemViewModel*>* taskVMs = [NSMutableArray new];
 
