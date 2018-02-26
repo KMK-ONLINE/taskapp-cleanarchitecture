@@ -17,6 +17,8 @@
 		A0B30B23203ADBF800645AD6 /* TaskTest.m in Sources */ = {isa = PBXBuildFile; fileRef = A0B30B22203ADBF800645AD6 /* TaskTest.m */; };
 		A0B30B26203ADC3C00645AD6 /* Task.m in Sources */ = {isa = PBXBuildFile; fileRef = A0B30B25203ADC3C00645AD6 /* Task.m */; };
 		F70ADF4C2044057000EFE025 /* InMemoryTaskRepository.m in Sources */ = {isa = PBXBuildFile; fileRef = F70ADF4B2044057000EFE025 /* InMemoryTaskRepository.m */; };
+		F70ADF5C20440E5B00EFE025 /* libOCMock.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F70ADF5B20440E5B00EFE025 /* libOCMock.a */; };
+		F70ADF5E20440E7700EFE025 /* libOCMock.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F70ADF5B20440E5B00EFE025 /* libOCMock.a */; };
 		F70F7AA22043EE6A00692058 /* TaskTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F70F7AA12043EE6A00692058 /* TaskTableViewCell.m */; };
 		F70F7AA52043F17F00692058 /* TaskListViewModelFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = F70F7AA42043F17F00692058 /* TaskListViewModelFactory.m */; };
 		F70F7AA82043F47600692058 /* ManageTaskFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = F70F7AA72043F47600692058 /* ManageTaskFactory.m */; };
@@ -66,6 +68,17 @@
 		A0B30B25203ADC3C00645AD6 /* Task.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Task.m; sourceTree = "<group>"; };
 		F70ADF4A2044057000EFE025 /* InMemoryTaskRepository.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = InMemoryTaskRepository.h; sourceTree = "<group>"; };
 		F70ADF4B2044057000EFE025 /* InMemoryTaskRepository.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = InMemoryTaskRepository.m; sourceTree = "<group>"; };
+		F70ADF5120440E5B00EFE025 /* OCMockObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCMockObject.h; sourceTree = "<group>"; };
+		F70ADF5220440E5B00EFE025 /* OCMMacroState.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCMMacroState.h; sourceTree = "<group>"; };
+		F70ADF5320440E5B00EFE025 /* OCMock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCMock.h; sourceTree = "<group>"; };
+		F70ADF5420440E5B00EFE025 /* NSNotificationCenter+OCMAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSNotificationCenter+OCMAdditions.h"; sourceTree = "<group>"; };
+		F70ADF5520440E5B00EFE025 /* OCMFunctions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCMFunctions.h; sourceTree = "<group>"; };
+		F70ADF5620440E5B00EFE025 /* OCMStubRecorder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCMStubRecorder.h; sourceTree = "<group>"; };
+		F70ADF5720440E5B00EFE025 /* OCMRecorder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCMRecorder.h; sourceTree = "<group>"; };
+		F70ADF5820440E5B00EFE025 /* OCMLocation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCMLocation.h; sourceTree = "<group>"; };
+		F70ADF5920440E5B00EFE025 /* OCMConstraint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCMConstraint.h; sourceTree = "<group>"; };
+		F70ADF5A20440E5B00EFE025 /* OCMArg.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCMArg.h; sourceTree = "<group>"; };
+		F70ADF5B20440E5B00EFE025 /* libOCMock.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libOCMock.a; sourceTree = "<group>"; };
 		F70F7AA02043EE6A00692058 /* TaskTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TaskTableViewCell.h; sourceTree = "<group>"; };
 		F70F7AA12043EE6A00692058 /* TaskTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TaskTableViewCell.m; sourceTree = "<group>"; };
 		F70F7AA32043F17F00692058 /* TaskListViewModelFactory.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TaskListViewModelFactory.h; sourceTree = "<group>"; };
@@ -93,6 +106,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F70ADF5C20440E5B00EFE025 /* libOCMock.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -100,6 +114,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F70ADF5E20440E7700EFE025 /* libOCMock.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -123,6 +138,8 @@
 				A0013186203AD17F0048E565 /* tasksTests */,
 				A0013191203AD17F0048E565 /* tasksUITests */,
 				A0013169203AD17F0048E565 /* Products */,
+				F70ADF5D20440E7700EFE025 /* Frameworks */,
+				F70ADF4E20440E1200EFE025 /* libs */,
 			);
 			sourceTree = "<group>";
 		};
@@ -182,6 +199,47 @@
 				A0B30B25203ADC3C00645AD6 /* Task.m */,
 			);
 			path = entity;
+			sourceTree = "<group>";
+		};
+		F70ADF4E20440E1200EFE025 /* libs */ = {
+			isa = PBXGroup;
+			children = (
+				F70ADF4F20440E4000EFE025 /* ocmock */,
+			);
+			path = libs;
+			sourceTree = "<group>";
+		};
+		F70ADF4F20440E4000EFE025 /* ocmock */ = {
+			isa = PBXGroup;
+			children = (
+				F70ADF5B20440E5B00EFE025 /* libOCMock.a */,
+				F70ADF5020440E5B00EFE025 /* OCMock */,
+			);
+			path = ocmock;
+			sourceTree = "<group>";
+		};
+		F70ADF5020440E5B00EFE025 /* OCMock */ = {
+			isa = PBXGroup;
+			children = (
+				F70ADF5120440E5B00EFE025 /* OCMockObject.h */,
+				F70ADF5220440E5B00EFE025 /* OCMMacroState.h */,
+				F70ADF5320440E5B00EFE025 /* OCMock.h */,
+				F70ADF5420440E5B00EFE025 /* NSNotificationCenter+OCMAdditions.h */,
+				F70ADF5520440E5B00EFE025 /* OCMFunctions.h */,
+				F70ADF5620440E5B00EFE025 /* OCMStubRecorder.h */,
+				F70ADF5720440E5B00EFE025 /* OCMRecorder.h */,
+				F70ADF5820440E5B00EFE025 /* OCMLocation.h */,
+				F70ADF5920440E5B00EFE025 /* OCMConstraint.h */,
+				F70ADF5A20440E5B00EFE025 /* OCMArg.h */,
+			);
+			path = OCMock;
+			sourceTree = "<group>";
+		};
+		F70ADF5D20440E7700EFE025 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		F70F7AA92043F54A00692058 /* factory */ = {
@@ -552,6 +610,10 @@
 				DEVELOPMENT_TEAM = QZ5K73KDV3;
 				INFOPLIST_FILE = tasks/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/libs/ocmock",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.kmk.tasks;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -566,6 +628,10 @@
 				DEVELOPMENT_TEAM = QZ5K73KDV3;
 				INFOPLIST_FILE = tasks/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/libs/ocmock",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.kmk.tasks;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -578,12 +644,20 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = QZ5K73KDV3;
+				HEADER_SEARCH_PATHS = "$(PROJECT_DIR)/libs/ocmock";
 				INFOPLIST_FILE = tasksTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/libs/ocmock",
+				);
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = com.kmk.tasksTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/tasks.app/tasks";
+				USER_HEADER_SEARCH_PATHS = "$(PROJECT_DIR)/viewmodel $(PROJECT_DIR)/interactor $(PROJECT_DIR)/entity";
+				USE_HEADERMAP = NO;
 			};
 			name = Debug;
 		};
@@ -593,12 +667,20 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = QZ5K73KDV3;
+				HEADER_SEARCH_PATHS = "$(PROJECT_DIR)/libs/ocmock";
 				INFOPLIST_FILE = tasksTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/libs/ocmock",
+				);
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = com.kmk.tasksTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/tasks.app/tasks";
+				USER_HEADER_SEARCH_PATHS = "$(PROJECT_DIR)/viewmodel $(PROJECT_DIR)/interactor $(PROJECT_DIR)/entity";
+				USE_HEADERMAP = NO;
 			};
 			name = Release;
 		};
