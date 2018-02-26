@@ -267,8 +267,6 @@
 				F70F7AA92043F54A00692058 /* factory */,
 				F75925162040214A006C96CD /* ManageTaskImpl.m */,
 				F759250E204016E2006C96CD /* ManageTaskImpl.h */,
-				F759251320401889006C96CD /* TaskListingItem.h */,
-				F759251420401889006C96CD /* TaskListingItem.m */,
 				F7592518204021EC006C96CD /* TaskRepository.h */,
 				F70ADF4A2044057000EFE025 /* InMemoryTaskRepository.h */,
 				F70ADF4B2044057000EFE025 /* InMemoryTaskRepository.m */,
@@ -280,6 +278,8 @@
 			isa = PBXGroup;
 			children = (
 				F759251A2043B4AB006C96CD /* ManageTask.h */,
+				F759251320401889006C96CD /* TaskListingItem.h */,
+				F759251420401889006C96CD /* TaskListingItem.m */,
 			);
 			name = api;
 			sourceTree = "<group>";
