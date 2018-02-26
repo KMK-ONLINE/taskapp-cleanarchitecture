@@ -16,6 +16,7 @@
 		A0013193203AD17F0048E565 /* tasksUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = A0013192203AD17F0048E565 /* tasksUITests.m */; };
 		A0B30B23203ADBF800645AD6 /* TaskTest.m in Sources */ = {isa = PBXBuildFile; fileRef = A0B30B22203ADBF800645AD6 /* TaskTest.m */; };
 		A0B30B26203ADC3C00645AD6 /* Task.m in Sources */ = {isa = PBXBuildFile; fileRef = A0B30B25203ADC3C00645AD6 /* Task.m */; };
+		F70ADF4C2044057000EFE025 /* InMemoryTaskRepository.m in Sources */ = {isa = PBXBuildFile; fileRef = F70ADF4B2044057000EFE025 /* InMemoryTaskRepository.m */; };
 		F70F7AA22043EE6A00692058 /* TaskTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F70F7AA12043EE6A00692058 /* TaskTableViewCell.m */; };
 		F70F7AA52043F17F00692058 /* TaskListViewModelFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = F70F7AA42043F17F00692058 /* TaskListViewModelFactory.m */; };
 		F70F7AA82043F47600692058 /* ManageTaskFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = F70F7AA72043F47600692058 /* ManageTaskFactory.m */; };
@@ -63,6 +64,8 @@
 		A0B30B22203ADBF800645AD6 /* TaskTest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TaskTest.m; sourceTree = "<group>"; };
 		A0B30B24203ADC3C00645AD6 /* Task.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Task.h; sourceTree = "<group>"; };
 		A0B30B25203ADC3C00645AD6 /* Task.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Task.m; sourceTree = "<group>"; };
+		F70ADF4A2044057000EFE025 /* InMemoryTaskRepository.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = InMemoryTaskRepository.h; sourceTree = "<group>"; };
+		F70ADF4B2044057000EFE025 /* InMemoryTaskRepository.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = InMemoryTaskRepository.m; sourceTree = "<group>"; };
 		F70F7AA02043EE6A00692058 /* TaskTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TaskTableViewCell.h; sourceTree = "<group>"; };
 		F70F7AA12043EE6A00692058 /* TaskTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TaskTableViewCell.m; sourceTree = "<group>"; };
 		F70F7AA32043F17F00692058 /* TaskListViewModelFactory.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TaskListViewModelFactory.h; sourceTree = "<group>"; };
@@ -209,6 +212,8 @@
 				F759251320401889006C96CD /* TaskListingItem.h */,
 				F759251420401889006C96CD /* TaskListingItem.m */,
 				F7592518204021EC006C96CD /* TaskRepository.h */,
+				F70ADF4A2044057000EFE025 /* InMemoryTaskRepository.h */,
+				F70ADF4B2044057000EFE025 /* InMemoryTaskRepository.m */,
 			);
 			path = interactor;
 			sourceTree = "<group>";
@@ -374,6 +379,7 @@
 				F759250C20401188006C96CD /* TasksTableViewController.m in Sources */,
 				F75925252043BF9E006C96CD /* TaskListItemViewModel.m in Sources */,
 				A001316D203AD17F0048E565 /* AppDelegate.m in Sources */,
+				F70ADF4C2044057000EFE025 /* InMemoryTaskRepository.m in Sources */,
 				F75925172040214A006C96CD /* ManageTaskImpl.m in Sources */,
 				A001317E203AD17F0048E565 /* main.m in Sources */,
 				A0013176203AD17F0048E565 /* tasks.xcdatamodeld in Sources */,

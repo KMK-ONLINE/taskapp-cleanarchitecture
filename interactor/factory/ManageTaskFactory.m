@@ -10,29 +10,12 @@
 #import "Task.h"
 #import "TaskRepository.h"
 #import "ManageTaskImpl.h"
-
-@interface TaskRepositoryDummy : NSObject<TaskRepository>
-
-@end
-
-@implementation TaskRepositoryDummy
-
--(NSArray<Task*>*) getAllTasks {
-    Task* task1 = [Task new];
-    task1.title = @"task 1";
-    
-    Task* task2 = [Task new];
-    task2.title = @"task 2";
-    
-    return @[task1, task2];
-}
-
-@end
+#import "InMemoryTaskRepository.h"
 
 @implementation ManageTaskFactory
 
 +(id<ManageTask>) create {
-    id<TaskRepository> taskRepository = [TaskRepositoryDummy new];
+    id<TaskRepository> taskRepository = [InMemoryTaskRepository new];;
     return [[ManageTaskImpl alloc] initWithTaskRepository:taskRepository];
 }
 
