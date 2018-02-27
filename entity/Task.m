@@ -20,6 +20,7 @@
 {
     self = [super init];
     if (self) {
+        self.taskId = 0;
         self.completed = false;
         self.title = @"New Task";
     }

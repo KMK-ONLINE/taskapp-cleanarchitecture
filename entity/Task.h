@@ -10,6 +10,7 @@
 
 @interface Task : NSObject
 
+@property(nonatomic, assign) NSInteger taskId;
 @property(nonatomic, strong) NSString* title;
 @property(nonatomic, assign, readonly) BOOL isCompleted;
 

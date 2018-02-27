@@ -28,9 +28,11 @@
 
 -(void) seedWithExampleTasks {
     Task* task1 = [Task new];
+    task1.taskId = 100;
     task1.title = @"Example task 1";
 
     Task* task2 = [Task new];
+    task1.taskId = 200;
     task2.title = @"Example task 2";
     [task2 toggleCompleted];
 

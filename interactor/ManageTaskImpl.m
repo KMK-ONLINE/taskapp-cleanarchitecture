@@ -6,6 +6,7 @@
 //  Copyright © 2018 kmklabs. All rights reserved.
 //
 
+#import <ReactiveObjC/ReactiveObjC.h>
 #import "ManageTaskImpl.h"
 #import "Task.h"
 
@@ -27,19 +28,17 @@
 
 -(NSArray<TaskListingItem*>*) getAllTasks
 {
-    NSMutableArray<TaskListingItem*>* taskListing = [NSMutableArray<TaskListingItem*> new];
-  
-    for(Task* task in [self.taskRepository getAllTasks]){
-        TaskListingItem* taskListingItem = [self createTaskListingItemFrom: task];
-        [taskListing addObject:taskListingItem];
-    }
-
-    return taskListing;
+    return
+    [[[[self.taskRepository getAllTasks] rac_sequence]
+      map:^TaskListingItem* (Task * task) {
+          return [ManageTaskImpl createTaskListingItemFrom:task];
+      }] array];
 }
 
--(TaskListingItem*) createTaskListingItemFrom:(Task*) task {
++(TaskListingItem*) createTaskListingItemFrom:(Task*) task {
     TaskListingItem* taskListingItem = [TaskListingItem new];
 
+    taskListingItem.taskId = task.taskId;
     taskListingItem.title = task.title;
     taskListingItem.isCompleted = task.isCompleted;
 
