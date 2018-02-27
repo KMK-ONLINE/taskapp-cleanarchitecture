@@ -7,25 +7,10 @@
 //
 
 #import <XCTest/XCTest.h>
+#import <OCMock/OCMock.h>
 #import "TaskListViewModel.h"
 #import "ManageTask.h"
 #import "TaskListingItem.h"
-
-@interface ManageTaskMock : NSObject<ManageTask>
-
-@end
-
-@implementation ManageTaskMock
-
--(NSArray<TaskListingItem*>*) getAllTasks {
-    TaskListingItem* task1 = [TaskListingItem new];
-    task1.title = @"task 1";
-    
-    return @[task1, [TaskListingItem new]];
-}
-
-@end
-
 
 @interface TaskListViewModelTest : XCTestCase
 
@@ -35,12 +20,24 @@
 
 - (void)testLoad {
     
-    id<ManageTask> manageTask = [ManageTaskMock new];
+    id manageTask = OCMProtocolMock(@protocol(ManageTask));
+    OCMStub([manageTask getAllTasks]).andReturn([self createSampleTasks]);
+    
     TaskListViewModel* taskListVM = [[TaskListViewModel alloc]  initWithManageTask:manageTask];
-
+    
     XCTAssertEqual(taskListVM.tasks.count, 2);
     XCTAssertTrue([taskListVM.tasks.firstObject.title isEqualToString:@"task 1"]);
 }
 
+-(NSArray<TaskListingItem*>*) createSampleTasks {
+    
+    TaskListingItem* task1 = [TaskListingItem new];
+    task1.title = @"task 1";
+    
+    TaskListingItem* task2 = [TaskListingItem new];
+    task2.title = @"task 2";
+    
+    return @[task1, task2];
+}
 
 @end
