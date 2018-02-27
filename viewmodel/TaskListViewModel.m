@@ -54,7 +54,7 @@
     TaskListItemViewModel* taskVM = [TaskListItemViewModel new];
 
     taskVM.title = taskItem.title;
-    taskVM.isCompleted = taskItem.isCompleted;
+    taskVM.isCompleted = @(taskItem.isCompleted);
    
     return taskVM;
 }

@@ -19,6 +19,8 @@
 		F70ADF4C2044057000EFE025 /* InMemoryTaskRepository.m in Sources */ = {isa = PBXBuildFile; fileRef = F70ADF4B2044057000EFE025 /* InMemoryTaskRepository.m */; };
 		F70ADF5C20440E5B00EFE025 /* libOCMock.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F70ADF5B20440E5B00EFE025 /* libOCMock.a */; };
 		F70ADF5E20440E7700EFE025 /* libOCMock.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F70ADF5B20440E5B00EFE025 /* libOCMock.a */; };
+		F70ADFC72045110E00EFE025 /* ReactiveObjC.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F70ADFBE204510CA00EFE025 /* ReactiveObjC.framework */; };
+		F70ADFCA2045114F00EFE025 /* ReactiveObjC.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = F70ADFBE204510CA00EFE025 /* ReactiveObjC.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		F70F7AA22043EE6A00692058 /* TaskTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F70F7AA12043EE6A00692058 /* TaskTableViewCell.m */; };
 		F70F7AA52043F17F00692058 /* TaskListViewModelFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = F70F7AA42043F17F00692058 /* TaskListViewModelFactory.m */; };
 		F70F7AA82043F47600692058 /* ManageTaskFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = F70F7AA72043F47600692058 /* ManageTaskFactory.m */; };
@@ -46,7 +48,77 @@
 			remoteGlobalIDString = A0013167203AD17F0048E565;
 			remoteInfo = tasks;
 		};
+		F70ADFB9204510CA00EFE025 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F70ADFAF204510CA00EFE025 /* ReactiveObjC.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = D04725EA19E49ED7006002AA;
+			remoteInfo = "ReactiveObjC-macOS";
+		};
+		F70ADFBB204510CA00EFE025 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F70ADFAF204510CA00EFE025 /* ReactiveObjC.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = D04725F519E49ED7006002AA;
+			remoteInfo = "ReactiveObjC-macOSTests";
+		};
+		F70ADFBD204510CA00EFE025 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F70ADFAF204510CA00EFE025 /* ReactiveObjC.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = D047260C19E49F82006002AA;
+			remoteInfo = "ReactiveObjC-iOS";
+		};
+		F70ADFBF204510CA00EFE025 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F70ADFAF204510CA00EFE025 /* ReactiveObjC.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = D047261619E49F82006002AA;
+			remoteInfo = "ReactiveObjC-iOSTests";
+		};
+		F70ADFC1204510CA00EFE025 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F70ADFAF204510CA00EFE025 /* ReactiveObjC.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = A9B315541B3940610001CB9C;
+			remoteInfo = "ReactiveObjC-watchOS";
+		};
+		F70ADFC3204510CA00EFE025 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F70ADFAF204510CA00EFE025 /* ReactiveObjC.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 57A4D2411BA13D7A00F7D4B1;
+			remoteInfo = "ReactiveObjC-tvOS";
+		};
+		F70ADFC5204510CA00EFE025 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F70ADFAF204510CA00EFE025 /* ReactiveObjC.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 7DFBED031CDB8C9500EE435B;
+			remoteInfo = "ReactiveObjC-tvOSTests";
+		};
+		F70ADFCB2045116100EFE025 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F70ADFAF204510CA00EFE025 /* ReactiveObjC.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = D047260B19E49F82006002AA;
+			remoteInfo = "ReactiveObjC-iOS";
+		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		F70ADFC82045112300EFE025 /* Copy Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				F70ADFCA2045114F00EFE025 /* ReactiveObjC.framework in Copy Frameworks */,
+			);
+			name = "Copy Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		A0013168203AD17F0048E565 /* tasks.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = tasks.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -79,6 +151,7 @@
 		F70ADF5920440E5B00EFE025 /* OCMConstraint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCMConstraint.h; sourceTree = "<group>"; };
 		F70ADF5A20440E5B00EFE025 /* OCMArg.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCMArg.h; sourceTree = "<group>"; };
 		F70ADF5B20440E5B00EFE025 /* libOCMock.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libOCMock.a; sourceTree = "<group>"; };
+		F70ADFAF204510CA00EFE025 /* ReactiveObjC.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = ReactiveObjC.xcodeproj; path = ReactiveObjC/ReactiveObjC.xcodeproj; sourceTree = "<group>"; };
 		F70F7AA02043EE6A00692058 /* TaskTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TaskTableViewCell.h; sourceTree = "<group>"; };
 		F70F7AA12043EE6A00692058 /* TaskTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TaskTableViewCell.m; sourceTree = "<group>"; };
 		F70F7AA32043F17F00692058 /* TaskListViewModelFactory.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TaskListViewModelFactory.h; sourceTree = "<group>"; };
@@ -106,6 +179,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F70ADFC72045110E00EFE025 /* ReactiveObjC.framework in Frameworks */,
 				F70ADF5C20440E5B00EFE025 /* libOCMock.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -131,6 +205,7 @@
 		A001315F203AD17F0048E565 = {
 			isa = PBXGroup;
 			children = (
+				F70ADFAF204510CA00EFE025 /* ReactiveObjC.xcodeproj */,
 				F759250D204016A1006C96CD /* interactor */,
 				A0B30B21203AD7E200645AD6 /* entity */,
 				F759251F2043B85E006C96CD /* viewmodel */,
@@ -242,6 +317,20 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		F70ADFB0204510CA00EFE025 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F70ADFBA204510CA00EFE025 /* ReactiveObjC.framework */,
+				F70ADFBC204510CA00EFE025 /* ReactiveObjCTests.xctest */,
+				F70ADFBE204510CA00EFE025 /* ReactiveObjC.framework */,
+				F70ADFC0204510CA00EFE025 /* ReactiveObjCTests.xctest */,
+				F70ADFC2204510CA00EFE025 /* ReactiveObjC.framework */,
+				F70ADFC4204510CA00EFE025 /* ReactiveObjC.framework */,
+				F70ADFC6204510CA00EFE025 /* ReactiveObjCTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		F70F7AA92043F54A00692058 /* factory */ = {
 			isa = PBXGroup;
 			children = (
@@ -306,10 +395,12 @@
 				A0013164203AD17F0048E565 /* Sources */,
 				A0013165203AD17F0048E565 /* Frameworks */,
 				A0013166203AD17F0048E565 /* Resources */,
+				F70ADFC82045112300EFE025 /* Copy Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				F70ADFCC2045116100EFE025 /* PBXTargetDependency */,
 			);
 			name = tasks;
 			productName = tasks;
@@ -388,6 +479,12 @@
 			mainGroup = A001315F203AD17F0048E565;
 			productRefGroup = A0013169203AD17F0048E565 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = F70ADFB0204510CA00EFE025 /* Products */;
+					ProjectRef = F70ADFAF204510CA00EFE025 /* ReactiveObjC.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				A0013167203AD17F0048E565 /* tasks */,
@@ -396,6 +493,58 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		F70ADFBA204510CA00EFE025 /* ReactiveObjC.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = ReactiveObjC.framework;
+			remoteRef = F70ADFB9204510CA00EFE025 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		F70ADFBC204510CA00EFE025 /* ReactiveObjCTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = ReactiveObjCTests.xctest;
+			remoteRef = F70ADFBB204510CA00EFE025 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		F70ADFBE204510CA00EFE025 /* ReactiveObjC.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = ReactiveObjC.framework;
+			remoteRef = F70ADFBD204510CA00EFE025 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		F70ADFC0204510CA00EFE025 /* ReactiveObjCTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = ReactiveObjCTests.xctest;
+			remoteRef = F70ADFBF204510CA00EFE025 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		F70ADFC2204510CA00EFE025 /* ReactiveObjC.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = ReactiveObjC.framework;
+			remoteRef = F70ADFC1204510CA00EFE025 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		F70ADFC4204510CA00EFE025 /* ReactiveObjC.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = ReactiveObjC.framework;
+			remoteRef = F70ADFC3204510CA00EFE025 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		F70ADFC6204510CA00EFE025 /* ReactiveObjCTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = ReactiveObjCTests.xctest;
+			remoteRef = F70ADFC5204510CA00EFE025 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		A0013166203AD17F0048E565 /* Resources */ = {
@@ -475,6 +624,11 @@
 			isa = PBXTargetDependency;
 			target = A0013167203AD17F0048E565 /* tasks */;
 			targetProxy = A001318F203AD17F0048E565 /* PBXContainerItemProxy */;
+		};
+		F70ADFCC2045116100EFE025 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "ReactiveObjC-iOS";
+			targetProxy = F70ADFCB2045116100EFE025 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -608,6 +762,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = QZ5K73KDV3;
+				HEADER_SEARCH_PATHS = (
+					"\"$(BUILD_ROOT)/../IntermediateBuildFilesPath/UninstalledProducts/include\"",
+					"$(inherited)",
+				);
 				INFOPLIST_FILE = tasks/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
@@ -626,6 +784,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = QZ5K73KDV3;
+				HEADER_SEARCH_PATHS = (
+					"\"$(BUILD_ROOT)/../IntermediateBuildFilesPath/UninstalledProducts/include\"",
+					"$(inherited)",
+				);
 				INFOPLIST_FILE = tasks/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (

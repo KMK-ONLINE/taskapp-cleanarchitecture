@@ -11,6 +11,6 @@
 @interface TaskListItemViewModel : NSObject
 
 @property(nonatomic, strong) NSString* title;
-@property(nonatomic, assign) BOOL isCompleted;
+@property(nonatomic, assign) NSNumber* isCompleted;
 
 @end
