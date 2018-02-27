@@ -7,7 +7,6 @@
 //
 
 #import "TaskTableViewCell.h"
-#import <ReactiveObjC/ReactiveObjC.h>
 
 @implementation TaskTableViewCell
 
@@ -16,18 +15,8 @@
 }
 
 -(void) setTaskVM:(TaskListItemViewModel*) taskVM {
-    RAC(self.textLabel, text) = RACObserve(taskVM, title);
-    [self bindIsCompletedStateFrom:taskVM];
-}
-
--(void) bindIsCompletedStateFrom:(TaskListItemViewModel*) taskVM {
-    @weakify(self)
-    [[RACObserve(taskVM, isCompleted)
-     takeUntil:[self rac_willDeallocSignal]]
-     subscribeNext:^(NSNumber* isCompleted) {
-         @strongify(self)
-         [self setChecked:[isCompleted boolValue]];
-     }];
+    self.textLabel.text = taskVM.title;
+    [self setChecked:[taskVM.isCompleted boolValue]];
 }
 
 -(void) setChecked:(BOOL) isCompleted {

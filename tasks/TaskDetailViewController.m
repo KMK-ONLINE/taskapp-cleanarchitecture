@@ -6,7 +6,6 @@
 //  Copyright © 2018 kmklabs. All rights reserved.
 //
 
-#import <ReactiveObjC/ReactiveObjC.h>
 #import "TaskDetailViewController.h"
 
 @implementation TaskDetailViewController
