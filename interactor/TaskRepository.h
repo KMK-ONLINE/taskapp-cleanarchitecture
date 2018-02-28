@@ -12,5 +12,7 @@
 @protocol TaskRepository <NSObject>
 
 -(NSArray<Task*>*) getAllTasks;
+-(Task*) getTaskWithId:(NSInteger) taskId;
+-(void) save:(Task*) task;
 
 @end

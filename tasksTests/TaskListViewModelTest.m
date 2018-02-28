@@ -25,8 +25,8 @@
     
     TaskListViewModel* taskListVM = [[TaskListViewModel alloc]  initWithManageTask:manageTask];
     
-    XCTAssertEqual(taskListVM.tasks.count, 2);
-    XCTAssertTrue([taskListVM.tasks.firstObject.title isEqualToString:@"task 1"]);
+    XCTAssertEqual(taskListVM.taskCount, 2);
+    XCTAssertTrue([[taskListVM getTaskOnIndex:0].title isEqualToString:@"task 1"]);
 }
 
 -(NSArray<TaskData*>*) createSampleTasks {

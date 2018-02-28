@@ -6,6 +6,7 @@
 //  Copyright © 2018 kmklabs. All rights reserved.
 //
 
+#import <ReactiveObjC/ReactiveObjC.h>
 #import "InMemoryTaskRepository.h"
 #import "Task.h"
 
@@ -41,6 +42,24 @@
 
 -(NSArray<Task*>*) getAllTasks {
     return self.tasks;
+}
+
+-(Task*) getTaskWithId:(NSInteger) taskId {
+    Task* task =
+    [[[[self.tasks rac_sequence]
+       filter:^BOOL(Task* task) {
+           return task.taskId == taskId;
+       }] array] firstObject];
+    
+    return task == nil? [Task new]: task;
+}
+
+-(void) save:(Task*) savedTask {
+    Task* task = [self getTaskWithId:savedTask.taskId];
+    if(task == nil) return;
+    
+    NSInteger taskIndex = [self.tasks indexOfObject:task];
+    self.tasks[taskIndex] = savedTask;
 }
 
 @end

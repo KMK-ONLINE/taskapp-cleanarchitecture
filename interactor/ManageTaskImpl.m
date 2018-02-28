@@ -35,6 +35,17 @@
       }] array];
 }
 
+-(TaskData*) toggleCompletedTaskWithId:(NSInteger) taskId {
+    
+    Task* task = [self.taskRepository getTaskWithId:taskId];
+    [task toggleCompleted];
+    [self.taskRepository save:task];
+    
+    return [ManageTaskImpl createTaskDataFrom:task];
+}
+
+#pragma mark - private
+
 +(TaskData*) createTaskDataFrom:(Task*) task {
     TaskData* taskData = [TaskData new];
 
