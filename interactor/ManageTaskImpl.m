@@ -26,23 +26,23 @@
     return self;
 }
 
--(NSArray<TaskListingItem*>*) getAllTasks
+-(NSArray<TaskData*>*) getAllTasks
 {
     return
     [[[[self.taskRepository getAllTasks] rac_sequence]
-      map:^TaskListingItem* (Task * task) {
-          return [ManageTaskImpl createTaskListingItemFrom:task];
+      map:^TaskData* (Task * task) {
+          return [ManageTaskImpl createTaskDataFrom:task];
       }] array];
 }
 
-+(TaskListingItem*) createTaskListingItemFrom:(Task*) task {
-    TaskListingItem* taskListingItem = [TaskListingItem new];
++(TaskData*) createTaskDataFrom:(Task*) task {
+    TaskData* taskData = [TaskData new];
 
-    taskListingItem.taskId = task.taskId;
-    taskListingItem.title = task.title;
-    taskListingItem.isCompleted = task.isCompleted;
+    taskData.taskId = task.taskId;
+    taskData.title = task.title;
+    taskData.isCompleted = task.isCompleted;
 
-    return taskListingItem;
+    return taskData;
 }
 
 @end

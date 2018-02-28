@@ -10,7 +10,7 @@
 #import <OCMock/OCMock.h>
 #import "TaskListViewModel.h"
 #import "ManageTask.h"
-#import "TaskListingItem.h"
+#import "TaskData.h"
 
 @interface TaskListViewModelTest : XCTestCase
 
@@ -29,12 +29,12 @@
     XCTAssertTrue([taskListVM.tasks.firstObject.title isEqualToString:@"task 1"]);
 }
 
--(NSArray<TaskListingItem*>*) createSampleTasks {
+-(NSArray<TaskData*>*) createSampleTasks {
     
-    TaskListingItem* task1 = [TaskListingItem new];
+    TaskData* task1 = [TaskData new];
     task1.title = @"task 1";
     
-    TaskListingItem* task2 = [TaskListingItem new];
+    TaskData* task2 = [TaskData new];
     task2.title = @"task 2";
     
     return @[task1, task2];

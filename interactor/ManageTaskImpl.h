@@ -7,7 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "TaskListingItem.h"
+#import "TaskData.h"
 #import "ManageTask.h"
 #import "TaskRepository.h"
 

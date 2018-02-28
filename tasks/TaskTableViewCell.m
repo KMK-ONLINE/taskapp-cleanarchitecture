@@ -14,9 +14,9 @@
     [super awakeFromNib];
 }
 
--(void) setTaskVM:(TaskListItemViewModel*) taskVM {
-    self.textLabel.text = taskVM.title;
-    [self setChecked:[taskVM.isCompleted boolValue]];
+-(void) setTask:(TaskData*) task {
+    self.textLabel.text = task.title;
+    [self setChecked:task.isCompleted];
 }
 
 -(void) setChecked:(BOOL) isCompleted {

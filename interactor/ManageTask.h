@@ -7,10 +7,10 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "TaskListingItem.h"
+#import "TaskData.h"
 
 @protocol ManageTask <NSObject>
 
--(NSArray<TaskListingItem*>*) getAllTasks;
+-(NSArray<TaskData*>*) getAllTasks;
 
 @end

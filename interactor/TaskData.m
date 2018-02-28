@@ -6,8 +6,8 @@
 //  Copyright © 2018 kmklabs. All rights reserved.
 //
 
-#import "TaskListingItem.h"
+#import "TaskData.h"
 
-@implementation TaskListingItem
+@implementation TaskData
 
 @end

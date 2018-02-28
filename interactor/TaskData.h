@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface TaskListingItem : NSObject
+@interface TaskData : NSObject
 
 @property(nonatomic, assign) NSInteger taskId;
 @property(nonatomic, strong) NSString* title;

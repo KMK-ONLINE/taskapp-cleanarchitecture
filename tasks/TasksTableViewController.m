@@ -9,9 +9,7 @@
 #import "TasksTableViewController.h"
 #import "TaskTableViewCell.h"
 #import "TaskListViewModel.h"
-#import "TaskListItemViewModel.h"
 #import "TaskListViewModelFactory.h"
-#import "TaskDetailViewModel.h"
 #import "TaskDetailViewController.h"
 
 @interface TasksTableViewController ()
@@ -50,9 +48,9 @@
                                                             forIndexPath:indexPath];
    
     TaskTableViewCell* taskCell = (TaskTableViewCell*) cell;
-    TaskListItemViewModel* taskVM = [self.taskListVM getTaskVMOnIndex:indexPath.row];
+    TaskData* task = [self.taskListVM getTaskOnIndex:indexPath.row];
     
-    [taskCell setTaskVM:taskVM];
+    [taskCell setTask:task];
 
     return cell;
 }
@@ -65,20 +63,10 @@
     NSIndexPath* selectedIndexPath = self.tableView.indexPathForSelectedRow;
     if(selectedIndexPath == nil) return;
     
-    TaskListItemViewModel* taskVM = [self.taskListVM getTaskVMOnIndex:selectedIndexPath.row];
-    TaskDetailViewModel* taskDetailVM = [self createTaskDetailViewModelFrom:taskVM];
-    
-    TaskDetailViewController* taskDetailViewcontroller = (TaskDetailViewController*) segue.destinationViewController;
-    taskDetailViewcontroller.taskDetailVM = taskDetailVM;
-}
+    TaskData* task = [self.taskListVM getTaskOnIndex:selectedIndexPath.row];
 
--(TaskDetailViewModel*) createTaskDetailViewModelFrom:(TaskListItemViewModel*) taskVM {
-    TaskDetailViewModel* taskDetailVM = [TaskDetailViewModel new];
-    
-    taskDetailVM.title = taskVM.title;
-    taskDetailVM.isCompleted = taskVM.isCompleted;
-    
-    return taskDetailVM;
+    TaskDetailViewController* taskDetailViewcontroller = (TaskDetailViewController*) segue.destinationViewController;
+    taskDetailViewcontroller.task = task;
 }
 
 

@@ -8,15 +8,14 @@
 
 #import <Foundation/Foundation.h>
 #import "ManageTask.h"
-#import "TaskListItemViewModel.h"
+#import "TaskData.h"
 
 @interface TaskListViewModel : NSObject
 
-@property(nonatomic, strong) NSArray<TaskListItemViewModel*>* tasks;
 @property(nonatomic, readonly, assign) NSInteger taskCount;
 
 -(instancetype) initWithManageTask:(id<ManageTask>) manageTask;
 
--(TaskListItemViewModel*) getTaskVMOnIndex:(NSInteger) index;
+-(TaskData*) getTaskOnIndex:(NSInteger) index;
 
 @end

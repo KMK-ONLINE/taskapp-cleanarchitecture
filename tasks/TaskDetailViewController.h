@@ -7,12 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "TaskDetailViewModel.h"
+#import "TaskData.h"
 
 @interface TaskDetailViewController : UIViewController
 
 @property (weak, nonatomic) IBOutlet UISwitch *completedSwitch;
 
-@property(nonatomic, strong) TaskDetailViewModel* taskDetailVM;
+@property(nonatomic, strong) TaskData* task;
 
 @end

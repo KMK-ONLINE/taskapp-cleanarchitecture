@@ -15,10 +15,10 @@
 }
 
 - (void)viewWillAppear:(BOOL)animated {
-    if(self.taskDetailVM == nil) return;
+    if(self.task == nil) return;
     
-    self.navigationItem.title = self.taskDetailVM.title;
-    [self.completedSwitch setOn:[self.taskDetailVM.isCompleted boolValue]];
+    self.navigationItem.title = self.task.title;
+    [self.completedSwitch setOn:self.task.isCompleted];
 }
 
 

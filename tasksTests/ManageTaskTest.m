@@ -25,7 +25,7 @@
     
     ManageTaskImpl* manageTask = [[ManageTaskImpl alloc] initWithTaskRepository:taskRepository];
     
-    NSArray<TaskListingItem*>* tasks = [manageTask getAllTasks];
+    NSArray<TaskData*>* tasks = [manageTask getAllTasks];
     
     XCTAssertEqual(tasks.count, 2);
     XCTAssertTrue([tasks.firstObject.title isEqualToString:@"task 1"]);

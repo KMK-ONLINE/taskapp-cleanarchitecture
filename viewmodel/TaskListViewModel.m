@@ -7,10 +7,12 @@
 //
 
 #import "TaskListViewModel.h"
+#import "TaskData.h"
 
 @interface TaskListViewModel()
 
-@property(nonatomic, retain) id<ManageTask> manageTask;
+@property(nonatomic, strong) id<ManageTask> manageTask;
+@property(nonatomic, strong) NSArray<TaskData*>* tasks;
 
 @end
 
@@ -20,7 +22,7 @@
     self = [super init];
     if (self) {
         self.manageTask = manageTask;
-        self.tasks = [self createTaskVMsFrom:self.manageTask.getAllTasks];
+        self.tasks = [self.manageTask getAllTasks];
     }
     return self;
 }
@@ -29,34 +31,13 @@
     return self.tasks.count;
 }
 
--(TaskListItemViewModel*) getTaskVMOnIndex:(NSInteger) index {
-    if([self hasTaskForIndex:index]) return [TaskListItemViewModel new];
+-(TaskData*) getTaskOnIndex:(NSInteger) index {
+    if([self hasTaskForIndex:index]) return [TaskData new];
     return self.tasks[index];
 }
 
 -(BOOL) hasTaskForIndex:(NSInteger) index {
     return self.taskCount > 0 && index < 0 && index < self.taskCount;
-}
-
--(NSArray<TaskListItemViewModel*>*) createTaskVMsFrom:(NSArray<TaskListingItem*>*) taskListing {
-    NSMutableArray<TaskListItemViewModel*>* taskVMs = [NSMutableArray new];
-
-    for(TaskListingItem* taskItem in taskListing) {
-        TaskListItemViewModel* taskVM = [self createTaskVMFrom:taskItem];
-        [taskVMs addObject:taskVM];
-    }
-    
-    return taskVMs;
-}
-
--(TaskListItemViewModel*) createTaskVMFrom:(TaskListingItem*) taskItem {
-    
-    TaskListItemViewModel* taskVM = [TaskListItemViewModel new];
-
-    taskVM.title = taskItem.title;
-    taskVM.isCompleted = @(taskItem.isCompleted);
-   
-    return taskVM;
 }
 
 @end
