@@ -15,4 +15,6 @@
 
 @property(nonatomic, strong) TaskData* task;
 
+- (IBAction)completedSwitchToggled:(id)sender;
+
 @end

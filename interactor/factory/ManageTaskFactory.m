@@ -14,9 +14,15 @@
 
 @implementation ManageTaskFactory
 
-+(id<ManageTask>) create {
-    id<TaskRepository> taskRepository = [InMemoryTaskRepository new];;
-    return [[ManageTaskImpl alloc] initWithTaskRepository:taskRepository];
++(id<ManageTask>)sharedInstance
+{
+    static ManageTaskImpl *sharedInstance = nil;
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        id<TaskRepository> taskRepository = [InMemoryTaskRepository new];
+        sharedInstance = [[ManageTaskImpl alloc] initWithTaskRepository:taskRepository];
+    });
+    return sharedInstance;
 }
 
 @end

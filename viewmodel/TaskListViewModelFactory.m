@@ -13,7 +13,7 @@
 @implementation TaskListViewModelFactory
 
 +(TaskListViewModel*) create {
-    id<ManageTask> manageTask = [ManageTaskFactory create];
+    id<ManageTask> manageTask = [ManageTaskFactory sharedInstance];
     TaskListViewModel* taskListVM = [[TaskListViewModel alloc] initWithManageTask:manageTask];
     return taskListVM;
 }

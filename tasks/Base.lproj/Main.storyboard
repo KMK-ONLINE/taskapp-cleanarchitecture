@@ -74,6 +74,9 @@
                                             </label>
                                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="JPU-Oc-l4u">
                                                 <rect key="frame" x="326" y="0.0" width="51" height="23"/>
+                                                <connections>
+                                                    <action selector="completedSwitchToggled:" destination="TZq-GJ-mHf" eventType="valueChanged" id="iBF-76-i0V"/>
+                                                </connections>
                                             </switch>
                                         </subviews>
                                     </stackView>

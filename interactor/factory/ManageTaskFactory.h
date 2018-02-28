@@ -11,6 +11,6 @@
 
 @interface ManageTaskFactory : NSObject
 
-+(id<ManageTask>) create;
++(id<ManageTask>) sharedInstance;
 
 @end
