@@ -12,9 +12,9 @@
 @interface TaskDetailViewController : UIViewController
 
 @property (weak, nonatomic) IBOutlet UISwitch *completedSwitch;
-
 @property(nonatomic, strong) TaskData* task;
 
+- (IBAction)delete:(id)sender;
 - (IBAction)completedSwitchToggled:(id)sender;
 
 @end

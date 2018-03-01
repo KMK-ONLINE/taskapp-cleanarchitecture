@@ -35,6 +35,9 @@
     return self.tasks.count;
 }
 
+- (IBAction)save:(id)sender {
+}
+
 -(TaskData*) getTaskOnIndex:(NSInteger) index {
     if([self hasTaskForIndex:index]) return [TaskData new];
     return self.tasks[index];

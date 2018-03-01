@@ -27,7 +27,6 @@
 }
 
 -(void) viewWillAppear:(BOOL)animated {
-    self.navigationItem.title = @"Tasks";
     [self clearSelectedItem:animated];
     [self.viewModel refreshData];
     [self.tableView reloadData];

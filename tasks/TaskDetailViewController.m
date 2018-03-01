@@ -32,6 +32,10 @@
     [self.completedSwitch setOn:self.task.isCompleted];
 }
 
+- (IBAction)delete:(id)sender {
+    [self.navigationController popViewControllerAnimated:true];
+}
+
 - (IBAction)completedSwitchToggled:(id)sender {
     [self.manageTask toggleCompletedTaskWithId:self.task.taskId];
 }
