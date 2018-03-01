@@ -30,7 +30,7 @@
     XCTAssertTrue([tasks.firstObject.title isEqualToString:@"task 1"]);
 }
 
-- (void)testCompleteTask {
+- (void)testToggleCompleted {
    
     Task* task1 = [Task new];
     task1.title = @"task 1";
@@ -41,15 +41,13 @@
     
     ManageTaskImpl* manageTask = [[ManageTaskImpl alloc] initWithTaskRepository:taskRepository];
     
-    TaskData* taskData1 = [manageTask getAllTasks].firstObject;
-    XCTAssertFalse(taskData1.isCompleted);
-    
-    TaskData* taskData2 = [manageTask toggleCompletedTaskWithId:taskData1.taskId];
-    
-    XCTAssertTrue(taskData2.isCompleted);
-    
+    TaskData* initialTask = [manageTask getAllTasks].firstObject;
+    TaskData* toggledTask = [manageTask toggleCompletedTaskWithId:initialTask.taskId];
+   
+    XCTAssertNotEqual(initialTask.isCompleted, toggledTask.isCompleted);
+
     OCMVerify([taskRepository save:[OCMArg checkWithBlock:^BOOL(Task* task) {
-        return task.taskId == taskData1.taskId && task.isCompleted;
+        return task.taskId == initialTask.taskId && task.isCompleted;
     }]]);
 }
 
