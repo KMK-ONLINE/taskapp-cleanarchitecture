@@ -27,9 +27,7 @@
 
 - (void)viewWillAppear:(BOOL)animated {
     if(self.task == nil) return;
-    
-    self.navigationItem.title = self.task.title;
-    [self.completedSwitch setOn:self.task.isCompleted];
+    [self loadTaskData];
 }
 
 - (IBAction)delete:(id)sender {
@@ -40,4 +38,12 @@
 - (IBAction)completedSwitchToggled:(id)sender {
     [self.manageTask toggleCompletedTaskWithId:self.task.taskId];
 }
+
+#pragma mark - private
+
+-(void) loadTaskData {
+    self.navigationItem.title = self.task.title;
+    [self.completedSwitch setOn:self.task.isCompleted];
+}
+
 @end

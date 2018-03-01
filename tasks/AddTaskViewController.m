@@ -21,6 +21,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.manageTask = [ManageTaskFactory sharedInstance];
+    [self.titleTextField becomeFirstResponder];
 }
 
 - (IBAction)save:(id)sender {
