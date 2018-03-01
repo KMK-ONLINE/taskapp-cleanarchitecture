@@ -23,12 +23,12 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.tableView.allowsMultipleSelection = NO;
-    self.clearsSelectionOnViewWillAppear = YES;
     self.taskListVM = [TaskListViewModelFactory create];
 }
 
 -(void) viewWillAppear:(BOOL)animated {
     self.navigationItem.title = @"Tasks";
+    [self clearSelectedItem:animated];
 }
 
 #pragma mark - Table view data source
@@ -69,6 +69,12 @@
     taskDetailViewcontroller.task = task;
 }
 
+-(void) clearSelectedItem:(BOOL) animated {
+    NSIndexPath *indexPath = self.tableView.indexPathForSelectedRow;
+    if (indexPath) {
+        [self.tableView deselectRowAtIndexPath:indexPath animated:animated];
+    }
+}
 
 
 @end

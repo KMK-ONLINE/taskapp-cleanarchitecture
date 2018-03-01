@@ -19,6 +19,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <view key="tableFooterView" contentMode="scaleToFill" id="ii4-PQ-WdW">
+                            <rect key="frame" x="0.0" y="72" width="375" height="44"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </view>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="checkmark" indentationWidth="10" reuseIdentifier="taskCell" textLabel="Deq-yt-xgy" style="IBUITableViewCellStyleDefault" id="HJg-eY-qi0" customClass="TaskTableViewCell">
                                 <rect key="frame" x="0.0" y="28" width="375" height="44"/>
@@ -60,49 +65,49 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="zb5-Z6-7Up">
-                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="To8-np-Taw">
+                                <rect key="frame" x="20" y="84" width="335" height="31"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="Z6o-kR-alR">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="23"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="335" height="31"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Completed" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yyc-qf-eLZ">
-                                                <rect key="frame" x="0.0" y="0.0" width="318" height="23"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="278" height="31"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="JPU-Oc-l4u">
-                                                <rect key="frame" x="326" y="0.0" width="51" height="23"/>
+                                                <rect key="frame" x="286" y="0.0" width="51" height="31"/>
                                                 <connections>
                                                     <action selector="completedSwitchToggled:" destination="TZq-GJ-mHf" eventType="valueChanged" id="iBF-76-i0V"/>
                                                 </connections>
                                             </switch>
                                         </subviews>
                                     </stackView>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zFZ-5C-B0w">
-                                        <rect key="frame" x="0.0" y="31" width="375" height="572"/>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                    </view>
                                 </subviews>
                             </stackView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="kTp-gI-gJW" firstAttribute="trailing" secondItem="zb5-Z6-7Up" secondAttribute="trailing" id="4Dt-Zq-CBh"/>
-                            <constraint firstItem="zb5-Z6-7Up" firstAttribute="leading" secondItem="kTp-gI-gJW" secondAttribute="leading" id="Zh7-UX-uzi"/>
-                            <constraint firstItem="zb5-Z6-7Up" firstAttribute="top" secondItem="kTp-gI-gJW" secondAttribute="top" id="bSo-GF-AYr"/>
-                            <constraint firstItem="kTp-gI-gJW" firstAttribute="bottom" secondItem="zb5-Z6-7Up" secondAttribute="bottom" id="r6N-dI-LHW"/>
+                            <constraint firstItem="To8-np-Taw" firstAttribute="top" secondItem="kTp-gI-gJW" secondAttribute="top" constant="20" id="MHY-CI-FYM"/>
+                            <constraint firstItem="kTp-gI-gJW" firstAttribute="trailing" secondItem="To8-np-Taw" secondAttribute="trailing" constant="20" id="Q1G-Lf-baL"/>
+                            <constraint firstItem="To8-np-Taw" firstAttribute="leading" secondItem="kTp-gI-gJW" secondAttribute="leading" constant="20" id="w74-fZ-ZCP"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="kTp-gI-gJW"/>
                     </view>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" id="c6u-lj-ayC">
+                        <barButtonItem key="rightBarButtonItem" systemItem="trash" id="NKS-Jp-FGH"/>
+                    </navigationItem>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="completedSwitch" destination="JPU-Oc-l4u" id="BYi-Jw-mte"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8Hz-nE-dZy" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2071" y="117"/>
+            <point key="canvasLocation" x="2069.5999999999999" y="116.49175412293854"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="F1M-fj-PCu">
