@@ -53,6 +53,25 @@
     }]]);
 }
 
+-(void) testAddTask {
+    id taskRepository = OCMProtocolMock(@protocol(TaskRepository));
+    ManageTaskImpl* manageTask = [[ManageTaskImpl alloc] initWithTaskRepository:taskRepository];
+    NSString* taskTitle = @"My New Task";
+    
+    [manageTask addTaskWithTitle:taskTitle];
+
+    OCMVerify([taskRepository addTaskWithTitle:taskTitle]);
+}
+
+-(void) testDeleteTask {
+    id taskRepository = OCMProtocolMock(@protocol(TaskRepository));
+    ManageTaskImpl* manageTask = [[ManageTaskImpl alloc] initWithTaskRepository:taskRepository];
+
+    [manageTask deleteTaskWithId:100];
+    
+    OCMVerify([taskRepository deleteTaskWithId:100]);
+}
+
 #pragma mark - private
 
 -(NSArray<Task*>*) createSampleTasks {

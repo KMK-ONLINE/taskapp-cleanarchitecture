@@ -13,6 +13,8 @@
 
 -(NSArray<Task*>*) getAllTasks;
 -(Task*) getTaskWithId:(NSInteger) taskId;
+-(void) addTaskWithTitle:(NSString *)title;
+-(void) deleteTaskWithId:(NSInteger) taskId;
 -(void) save:(Task*) task;
 
 @end

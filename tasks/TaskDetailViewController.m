@@ -33,6 +33,7 @@
 }
 
 - (IBAction)delete:(id)sender {
+    [self.manageTask deleteTaskWithId:self.task.taskId];
     [self.navigationController popViewControllerAnimated:true];
 }
 

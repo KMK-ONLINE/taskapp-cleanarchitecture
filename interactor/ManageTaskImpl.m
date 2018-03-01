@@ -35,6 +35,14 @@
       }] array];
 }
 
+-(void) addTaskWithTitle:(NSString *)title {
+    [self.taskRepository addTaskWithTitle:title];
+}
+
+-(void) deleteTaskWithId:(NSInteger) taskId {
+    [self.taskRepository deleteTaskWithId:taskId];
+}
+
 -(TaskData*) toggleCompletedTaskWithId:(NSInteger) taskId {
     
     Task* task = [self.taskRepository getTaskWithId:taskId];

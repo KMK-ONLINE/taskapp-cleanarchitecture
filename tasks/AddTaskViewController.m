@@ -7,8 +7,12 @@
 //
 
 #import "AddTaskViewController.h"
+#import "ManageTask.h"
+#import "ManageTaskFactory.h"
 
 @interface AddTaskViewController ()
+
+@property(nonatomic, strong) id<ManageTask> manageTask;
 
 @end
 
@@ -16,14 +20,15 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
-}
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
+    self.manageTask = [ManageTaskFactory sharedInstance];
 }
 
 - (IBAction)save:(id)sender {
+    NSString* title = self.titleTextField.text;
+    if([title isEqualToString:@""]) return;
+    
+    [self.manageTask addTaskWithTitle:self.titleTextField.text];
     [self.navigationController popViewControllerAnimated:true];
 }
+
 @end

@@ -12,6 +12,8 @@
 @protocol ManageTask <NSObject>
 
 -(NSArray<TaskData*>*) getAllTasks;
+-(void) addTaskWithTitle:(NSString*) title;
+-(void) deleteTaskWithId:(NSInteger) taskId;
 -(TaskData*) toggleCompletedTaskWithId:(NSInteger) taskId;
 
 @end

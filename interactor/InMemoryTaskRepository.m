@@ -54,12 +54,30 @@
     return task == nil? [Task new]: task;
 }
 
+-(void) addTaskWithTitle:(NSString *)title {
+    Task* newTask = [Task new];
+    newTask.taskId = [self generateNewId];
+    newTask.title = title;
+    [self.tasks addObject:newTask];
+}
+
+-(void) deleteTaskWithId:(NSInteger) taskId {
+    Task* task = [self getTaskWithId:taskId];
+    [self.tasks removeObject:task];
+}
+
 -(void) save:(Task*) savedTask {
     Task* task = [self getTaskWithId:savedTask.taskId];
     if(task == nil) return;
     
     NSInteger taskIndex = [self.tasks indexOfObject:task];
     self.tasks[taskIndex] = savedTask;
+}
+
+#pragma mark - private
+
+-(NSInteger) generateNewId {
+    return self.tasks.lastObject.taskId + 1;
 }
 
 @end

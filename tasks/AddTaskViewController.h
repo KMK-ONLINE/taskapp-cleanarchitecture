@@ -10,6 +10,8 @@
 
 @interface AddTaskViewController : UIViewController
 
+@property (weak, nonatomic) IBOutlet UITextField *titleTextField;
+
 - (IBAction)save:(id)sender;
 
 @end
