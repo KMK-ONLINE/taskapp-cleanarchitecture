@@ -14,7 +14,7 @@
 
 @interface TasksTableViewController ()
 
-@property(nonatomic, strong) TaskListViewModel* taskListVM;
+@property(nonatomic, strong) TaskListViewModel* viewModel;
 
 @end
 
@@ -23,12 +23,14 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.tableView.allowsMultipleSelection = NO;
-    self.taskListVM = [TaskListViewModelFactory create];
+    self.viewModel = [TaskListViewModelFactory create];
 }
 
 -(void) viewWillAppear:(BOOL)animated {
     self.navigationItem.title = @"Tasks";
     [self clearSelectedItem:animated];
+    [self.viewModel refreshData];
+    [self.tableView reloadData];
 }
 
 #pragma mark - Table view data source
@@ -38,7 +40,7 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return self.taskListVM.taskCount;
+    return self.viewModel.taskCount;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView
@@ -48,7 +50,7 @@
                                                             forIndexPath:indexPath];
    
     TaskTableViewCell* taskCell = (TaskTableViewCell*) cell;
-    TaskData* task = [self.taskListVM getTaskOnIndex:indexPath.row];
+    TaskData* task = [self.viewModel getTaskOnIndex:indexPath.row];
     
     [taskCell setTask:task];
 
@@ -63,7 +65,7 @@
     NSIndexPath* selectedIndexPath = self.tableView.indexPathForSelectedRow;
     if(selectedIndexPath == nil) return;
     
-    TaskData* task = [self.taskListVM getTaskOnIndex:selectedIndexPath.row];
+    TaskData* task = [self.viewModel getTaskOnIndex:selectedIndexPath.row];
 
     TaskDetailViewController* taskDetailViewcontroller = (TaskDetailViewController*) segue.destinationViewController;
     taskDetailViewcontroller.task = task;

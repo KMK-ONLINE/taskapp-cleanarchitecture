@@ -22,9 +22,13 @@
     self = [super init];
     if (self) {
         self.manageTask = manageTask;
-        self.tasks = [self.manageTask getAllTasks];
+        [self refreshData];
     }
     return self;
+}
+
+-(void) refreshData {
+    self.tasks = [self.manageTask getAllTasks];
 }
 
 -(NSInteger) taskCount {

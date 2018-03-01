@@ -16,6 +16,7 @@
 
 -(instancetype) initWithManageTask:(id<ManageTask>) manageTask;
 
+-(void) refreshData;
 -(TaskData*) getTaskOnIndex:(NSInteger) index;
 
 @end

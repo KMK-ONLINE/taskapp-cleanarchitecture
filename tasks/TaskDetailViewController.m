@@ -8,11 +8,21 @@
 
 #import <ReactiveObjC/ReactiveObjC.h>
 #import "TaskDetailViewController.h"
+#import "ManageTask.h"
+#import "ManageTaskFactory.h"
+
+@interface TaskDetailViewController()
+
+@property(nonatomic, strong) id<ManageTask> manageTask;
+
+@end
+
 
 @implementation TaskDetailViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.manageTask = [ManageTaskFactory sharedInstance];
 }
 
 - (void)viewWillAppear:(BOOL)animated {
@@ -22,8 +32,7 @@
     [self.completedSwitch setOn:self.task.isCompleted];
 }
 
-
 - (IBAction)completedSwitchToggled:(id)sender {
-    NSLog(@"hello");
+    [self.manageTask toggleCompletedTaskWithId:self.task.taskId];
 }
 @end
