@@ -28,24 +28,6 @@
     return self;
 }
 
--(instancetype) initWithId:(NSString*) taskId
-                     title:(NSString*) title
-               isCompleted:(BOOL) isCompleted
-{
-    self = [super init];
-    if(!self) return self;
-    
-    self.taskId = taskId;
-    self.title = title;
-    self.completed = isCompleted;
-    
-    return self;
-}
-
--(BOOL) isCompleted {
-    return self.completed;
-}
-
 -(void) toggleCompleted {
     self.completed = !self.completed;
 }

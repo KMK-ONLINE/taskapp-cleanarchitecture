@@ -81,10 +81,13 @@ NSString* taskEntityName = @"TaskMO";
 #pragma mark - private
 
 +(Task*) createTaskFrom:(TaskMO*) taskMO {
-    return
-    [[Task alloc] initWithId:taskMO.objectID.URIRepresentation.absoluteString
-                       title:taskMO.title
-                 isCompleted:taskMO.isCompleted];
+    
+    Task* task = [Task new];
+    task.taskId = taskMO.objectID.URIRepresentation.absoluteString;
+    task.title = taskMO.title;
+    task.isCompleted = taskMO.isCompleted;
+    
+    return task;
 }
 
 -(void) save {
