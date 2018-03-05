@@ -281,6 +281,7 @@
 			children = (
 				A0B30B24203ADC3C00645AD6 /* Task.h */,
 				A0B30B25203ADC3C00645AD6 /* Task.m */,
+				F7592518204021EC006C96CD /* TaskRepository.h */,
 			);
 			path = entity;
 			sourceTree = "<group>";
@@ -359,15 +360,6 @@
 			path = adapter;
 			sourceTree = "<group>";
 		};
-		F70F7AA92043F54A00692058 /* factory */ = {
-			isa = PBXGroup;
-			children = (
-				F70F7AA62043F47600692058 /* ManageTaskFactory.h */,
-				F70F7AA72043F47600692058 /* ManageTaskFactory.m */,
-			);
-			path = factory;
-			sourceTree = "<group>";
-		};
 		F70F7AAA2043F56A00692058 /* factory */ = {
 			isa = PBXGroup;
 			children = (
@@ -377,14 +369,22 @@
 			name = factory;
 			sourceTree = "<group>";
 		};
+		F719C421204D43A90035CD21 /* factory */ = {
+			isa = PBXGroup;
+			children = (
+				F70F7AA62043F47600692058 /* ManageTaskFactory.h */,
+				F70F7AA72043F47600692058 /* ManageTaskFactory.m */,
+			);
+			name = factory;
+			sourceTree = "<group>";
+		};
 		F759250D204016A1006C96CD /* interactor */ = {
 			isa = PBXGroup;
 			children = (
+				F719C421204D43A90035CD21 /* factory */,
 				F75925192043B436006C96CD /* api */,
-				F70F7AA92043F54A00692058 /* factory */,
 				F75925162040214A006C96CD /* ManageTaskImpl.m */,
 				F759250E204016E2006C96CD /* ManageTaskImpl.h */,
-				F7592518204021EC006C96CD /* TaskRepository.h */,
 				F70ADF4A2044057000EFE025 /* InMemoryTaskRepository.h */,
 				F70ADF4B2044057000EFE025 /* InMemoryTaskRepository.m */,
 			);
