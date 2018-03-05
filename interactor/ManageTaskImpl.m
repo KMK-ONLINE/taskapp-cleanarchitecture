@@ -60,6 +60,8 @@
     taskData.taskId = task.taskId;
     taskData.title = task.title;
     taskData.isCompleted = task.isCompleted;
+    taskData.dueDate = task.dueDate;
+    taskData.isOverdue = [task isOverdueOn:[NSDate date]];
 
     return taskData;
 }

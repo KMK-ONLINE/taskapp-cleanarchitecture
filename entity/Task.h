@@ -13,10 +13,12 @@
 @property(nonatomic, strong) NSString* taskId;
 @property(nonatomic, strong) NSString* title;
 @property(nonatomic, assign) BOOL isCompleted;
+@property(nonatomic, strong) NSDate* dueDate;
 
 
 -(instancetype) init;
 
 -(void) toggleCompleted;
+-(BOOL) isOverdueOn:(NSDate*) referenceDate;
 
 @end

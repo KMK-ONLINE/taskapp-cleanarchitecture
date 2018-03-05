@@ -17,6 +17,14 @@
 -(void) setTask:(TaskData*) task {
     self.textLabel.text = task.title;
     [self setChecked:task.isCompleted];
+    [self renderDueDate:task.dueDate];
+}
+
+-(void) renderDueDate:(NSDate*)  dueDate {
+    self.detailTextLabel.text = [NSDateFormatter localizedStringFromDate:dueDate
+                                                               dateStyle:NSDateFormatterShortStyle
+                                                               timeStyle:NSDateFormatterShortStyle];
+    
 }
 
 -(void) setChecked:(BOOL) isCompleted {

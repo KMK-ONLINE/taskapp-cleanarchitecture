@@ -29,4 +29,15 @@
     XCTAssertTrue(task.isCompleted);
 }
 
+-(void) testIsDue {
+    Task* task = [Task new];
+    NSDate* currentDateTime = [NSDate date];
+    NSDate* oneHourBefore = [NSDate dateWithTimeIntervalSinceNow:-3600];
+    NSDate* oneHourLater = [NSDate dateWithTimeIntervalSinceNow:3600];
+    
+    task.dueDate = currentDateTime;
+    XCTAssertTrue([task isOverdueOn:oneHourBefore]);
+    XCTAssertFalse([task isOverdueOn:oneHourLater]);
+}
+
 @end

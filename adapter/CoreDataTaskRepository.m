@@ -59,7 +59,10 @@ NSString* taskEntityName = @"TaskMO";
 
 -(void) addTaskWithTitle:(NSString *) title {
     TaskMO* taskMO = [self createTaskMO];
-    taskMO.title = title;
+   
+    Task* newTask = [Task new];
+    [CoreDataTaskRepository saveToTaskMO:taskMO task:newTask];
+
     [self save];
 }
 
@@ -71,10 +74,9 @@ NSString* taskEntityName = @"TaskMO";
 
 -(void) save:(Task*) task {
     TaskMO* taskMO = [self getTaskMOWithId:task.taskId];
+    if(!taskMO) return;
     
-    taskMO.title = task.title;
-    taskMO.isCompleted = task.isCompleted;
-    
+    [CoreDataTaskRepository saveToTaskMO:taskMO task:task];
     [self save];
 }
 
@@ -86,8 +88,15 @@ NSString* taskEntityName = @"TaskMO";
     task.taskId = taskMO.objectID.URIRepresentation.absoluteString;
     task.title = taskMO.title;
     task.isCompleted = taskMO.isCompleted;
+    task.dueDate = taskMO.dueDate;
     
     return task;
+}
+
++(void) saveToTaskMO:(TaskMO*) taskMO task:(Task*) task {
+    taskMO.title = task.title;
+    taskMO.isCompleted = task.isCompleted;
+    taskMO.dueDate = task.dueDate;
 }
 
 -(void) save {

@@ -24,12 +24,17 @@
     self.taskId = 0;
     self.completed = false;
     self.title = @"New Task";
+    self.dueDate = [NSDate distantFuture];
     
     return self;
 }
 
 -(void) toggleCompleted {
     self.completed = !self.completed;
+}
+
+-(BOOL) isOverdueOn:(NSDate*) referenceDate {
+    return [self.dueDate compare:referenceDate] == NSOrderedDescending;
 }
 
 @end

@@ -13,5 +13,7 @@
 @property(nonatomic, strong) NSString* taskId;
 @property(nonatomic, strong) NSString* title;
 @property(nonatomic, assign) BOOL isCompleted;
+@property(nonatomic, strong) NSDate* dueDate;
+@property(nonatomic, assign) BOOL isOverdue;
 
 @end
