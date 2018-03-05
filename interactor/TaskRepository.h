@@ -12,9 +12,9 @@
 @protocol TaskRepository <NSObject>
 
 -(NSArray<Task*>*) getAllTasks;
--(Task*) getTaskWithId:(NSInteger) taskId;
+-(Task*) getTaskWithId:(NSString*) taskId;
 -(void) addTaskWithTitle:(NSString *)title;
--(void) deleteTaskWithId:(NSInteger) taskId;
+-(void) deleteTaskWithId:(NSString*) taskId;
 -(void) save:(Task*) task;
 
 @end

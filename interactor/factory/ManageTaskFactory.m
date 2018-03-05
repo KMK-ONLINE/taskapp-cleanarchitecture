@@ -10,7 +10,7 @@
 #import "Task.h"
 #import "TaskRepository.h"
 #import "ManageTaskImpl.h"
-#import "InMemoryTaskRepository.h"
+#import "CoreDataTaskRepository.h"
 
 @implementation ManageTaskFactory
 
@@ -19,7 +19,7 @@
     static ManageTaskImpl *sharedInstance = nil;
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
-        id<TaskRepository> taskRepository = [InMemoryTaskRepository new];
+        id<TaskRepository> taskRepository = [CoreDataTaskRepository new];
         sharedInstance = [[ManageTaskImpl alloc] initWithTaskRepository:taskRepository];
     });
     return sharedInstance;

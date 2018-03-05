@@ -29,11 +29,11 @@
 
 -(void) seedWithExampleTasks {
     Task* task1 = [Task new];
-    task1.taskId = 100;
+    task1.taskId = @"100";
     task1.title = @"Example task 1";
 
     Task* task2 = [Task new];
-    task1.taskId = 200;
+    task1.taskId = @"200";
     task2.title = @"Example task 2";
     [task2 toggleCompleted];
 
@@ -44,11 +44,11 @@
     return self.tasks;
 }
 
--(Task*) getTaskWithId:(NSInteger) taskId {
+-(Task*) getTaskWithId:(NSString*) taskId {
     Task* task =
     [[[[self.tasks rac_sequence]
        filter:^BOOL(Task* task) {
-           return task.taskId == taskId;
+           return [task.taskId isEqualToString:taskId];
        }] array] firstObject];
     
     return task == nil? [Task new]: task;
@@ -61,7 +61,7 @@
     [self.tasks addObject:newTask];
 }
 
--(void) deleteTaskWithId:(NSInteger) taskId {
+-(void) deleteTaskWithId:(NSString*) taskId {
     Task* task = [self getTaskWithId:taskId];
     [self.tasks removeObject:task];
 }
@@ -76,8 +76,8 @@
 
 #pragma mark - private
 
--(NSInteger) generateNewId {
-    return self.tasks.lastObject.taskId + 1;
+-(NSString*) generateNewId {
+    return [[NSProcessInfo processInfo] globallyUniqueString];
 }
 
 @end

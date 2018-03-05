@@ -10,7 +10,7 @@
 
 @interface TaskData : NSObject
 
-@property(nonatomic, assign) NSInteger taskId;
+@property(nonatomic, strong) NSString* taskId;
 @property(nonatomic, strong) NSString* title;
 @property(nonatomic, assign) BOOL isCompleted;
 

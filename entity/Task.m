@@ -19,11 +19,26 @@
 - (instancetype)init
 {
     self = [super init];
-    if (self) {
-        self.taskId = 0;
-        self.completed = false;
-        self.title = @"New Task";
-    }
+    if(!self) return self;
+    
+    self.taskId = 0;
+    self.completed = false;
+    self.title = @"New Task";
+    
+    return self;
+}
+
+-(instancetype) initWithId:(NSString*) taskId
+                     title:(NSString*) title
+               isCompleted:(BOOL) isCompleted
+{
+    self = [super init];
+    if(!self) return self;
+    
+    self.taskId = taskId;
+    self.title = title;
+    self.completed = isCompleted;
+    
     return self;
 }
 

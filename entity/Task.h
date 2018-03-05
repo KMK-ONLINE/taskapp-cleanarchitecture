@@ -10,9 +10,15 @@
 
 @interface Task : NSObject
 
-@property(nonatomic, assign) NSInteger taskId;
+@property(nonatomic, strong) NSString* taskId;
 @property(nonatomic, strong) NSString* title;
 @property(nonatomic, assign, readonly) BOOL isCompleted;
+
+
+-(instancetype) init;
+-(instancetype) initWithId:(NSString*) taskId
+                     title:(NSString*) title
+               isCompleted:(BOOL) isCompleted;
 
 -(void) toggleCompleted;
 

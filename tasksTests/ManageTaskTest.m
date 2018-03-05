@@ -65,9 +65,9 @@
     id taskRepository = OCMProtocolMock(@protocol(TaskRepository));
     ManageTaskImpl* manageTask = [[ManageTaskImpl alloc] initWithTaskRepository:taskRepository];
 
-    [manageTask deleteTaskWithId:100];
+    [manageTask deleteTaskWithId:@"100"];
     
-    OCMVerify([taskRepository deleteTaskWithId:100]);
+    OCMVerify([taskRepository deleteTaskWithId:@"100"]);
 }
 
 #pragma mark - private

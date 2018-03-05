@@ -13,7 +13,7 @@
 
 -(NSArray<TaskData*>*) getAllTasks;
 -(void) addTaskWithTitle:(NSString*) title;
--(void) deleteTaskWithId:(NSInteger) taskId;
--(TaskData*) toggleCompletedTaskWithId:(NSInteger) taskId;
+-(void) deleteTaskWithId:(NSString*) taskId;
+-(TaskData*) toggleCompletedTaskWithId:(NSString*) taskId;
 
 @end

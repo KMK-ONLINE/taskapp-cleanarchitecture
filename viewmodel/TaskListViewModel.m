@@ -39,12 +39,12 @@
 }
 
 -(TaskData*) getTaskOnIndex:(NSInteger) index {
-    if([self hasTaskForIndex:index]) return [TaskData new];
+    if(![self hasTaskForIndex:index]) return [TaskData new];
     return self.tasks[index];
 }
 
 -(BOOL) hasTaskForIndex:(NSInteger) index {
-    return self.taskCount > 0 && index < 0 && index < self.taskCount;
+    return self.taskCount > 0 && index >= 0 && index < self.taskCount;
 }
 
 @end

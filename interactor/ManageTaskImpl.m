@@ -39,11 +39,11 @@
     [self.taskRepository addTaskWithTitle:title];
 }
 
--(void) deleteTaskWithId:(NSInteger) taskId {
+-(void) deleteTaskWithId:(NSString*) taskId {
     [self.taskRepository deleteTaskWithId:taskId];
 }
 
--(TaskData*) toggleCompletedTaskWithId:(NSInteger) taskId {
+-(TaskData*) toggleCompletedTaskWithId:(NSString*) taskId {
     
     Task* task = [self.taskRepository getTaskWithId:taskId];
     [task toggleCompleted];
