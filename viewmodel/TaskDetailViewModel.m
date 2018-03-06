@@ -7,6 +7,7 @@
 //
 
 #import "TaskDetailViewModel.h"
+#import "DueDateRenderer.h"
 
 @interface TaskDetailViewModel()
 
@@ -24,7 +25,7 @@
     self.taskId = task.taskId;
     self.title = task.title;
     self.isCompleted = task.isCompleted;
-    self.due = [TaskDetailViewModel renderDueDate:task.dueDate];
+    self.due = [DueDateRenderer render:task.dueDate];
     
     self.manageTask = manageTask;
     
@@ -36,21 +37,12 @@
 }
 
 -(void) changeDue:(NSDate*) dueDate {
-    self.due = [TaskDetailViewModel renderDueDate:dueDate];
+    self.due = [DueDateRenderer render:dueDate];
     [self.manageTask changeDueForTaskWithId:self.taskId dueDate:dueDate];
 }
 
 -(void) delete {
     [self.manageTask deleteTaskWithId:self.taskId];
-}
-
-#pragma mark - private
-
-+(NSString*) renderDueDate:(NSDate*)  dueDate {
-    return
-    [NSDateFormatter localizedStringFromDate:dueDate
-                                   dateStyle:NSDateFormatterShortStyle
-                                   timeStyle:NSDateFormatterShortStyle];
 }
 
 @end

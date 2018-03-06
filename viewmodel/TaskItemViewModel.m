@@ -7,6 +7,7 @@
 //
 
 #import "TaskItemViewModel.h"
+#import "DueDateRenderer.h"
 
 @implementation TaskItemViewModel
 
@@ -16,18 +17,9 @@
     
     self.title = task.title;
     self.isCompleted = task.isCompleted;
-    self.due = [TaskItemViewModel renderDueDate:task.dueDate];
+    self.due = [DueDateRenderer render:task.dueDate];
     
     return self;
-}
-
-#pragma mark - private
-
-+(NSString*) renderDueDate:(NSDate*)  dueDate {
-    return
-    [NSDateFormatter localizedStringFromDate:dueDate
-                                   dateStyle:NSDateFormatterShortStyle
-                                   timeStyle:NSDateFormatterShortStyle];
 }
 
 @end

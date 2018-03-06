@@ -35,6 +35,7 @@
 		F75925222043B88C006C96CD /* TaskListViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F75925212043B88C006C96CD /* TaskListViewModel.m */; };
 		F77DFB7A204E8D9000793407 /* TaskItemViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F77DFB79204E8D9000793407 /* TaskItemViewModel.m */; };
 		F7AC56D3204E930F00BDDE84 /* TaskDetailViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F7AC56D2204E930F00BDDE84 /* TaskDetailViewModel.m */; };
+		F7AC56DC204E9EB400BDDE84 /* DueDateRenderer.m in Sources */ = {isa = PBXBuildFile; fileRef = F7AC56DB204E9EB400BDDE84 /* DueDateRenderer.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -184,6 +185,8 @@
 		F77DFB79204E8D9000793407 /* TaskItemViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TaskItemViewModel.m; sourceTree = "<group>"; };
 		F7AC56D1204E930F00BDDE84 /* TaskDetailViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TaskDetailViewModel.h; sourceTree = "<group>"; };
 		F7AC56D2204E930F00BDDE84 /* TaskDetailViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TaskDetailViewModel.m; sourceTree = "<group>"; };
+		F7AC56DA204E9EB400BDDE84 /* DueDateRenderer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DueDateRenderer.h; sourceTree = "<group>"; };
+		F7AC56DB204E9EB400BDDE84 /* DueDateRenderer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DueDateRenderer.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -417,6 +420,8 @@
 				F77DFB79204E8D9000793407 /* TaskItemViewModel.m */,
 				F7AC56D1204E930F00BDDE84 /* TaskDetailViewModel.h */,
 				F7AC56D2204E930F00BDDE84 /* TaskDetailViewModel.m */,
+				F7AC56DA204E9EB400BDDE84 /* DueDateRenderer.h */,
+				F7AC56DB204E9EB400BDDE84 /* DueDateRenderer.m */,
 			);
 			path = viewmodel;
 			sourceTree = "<group>";
@@ -619,6 +624,7 @@
 				F70F7AA82043F47600692058 /* ManageTaskFactory.m in Sources */,
 				F70F7AA22043EE6A00692058 /* TaskTableViewCell.m in Sources */,
 				F759251520401889006C96CD /* TaskData.m in Sources */,
+				F7AC56DC204E9EB400BDDE84 /* DueDateRenderer.m in Sources */,
 				F759250C20401188006C96CD /* TasksTableViewController.m in Sources */,
 				F70ADFEE2048F93E00EFE025 /* CoreDataTaskRepository.m in Sources */,
 				F7AC56D3204E930F00BDDE84 /* TaskDetailViewModel.m in Sources */,
