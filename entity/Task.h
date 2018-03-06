@@ -15,7 +15,6 @@
 @property(nonatomic, assign) BOOL isCompleted;
 @property(nonatomic, strong) NSDate* dueDate;
 
-
 -(instancetype) init;
 
 -(void) toggleCompleted;

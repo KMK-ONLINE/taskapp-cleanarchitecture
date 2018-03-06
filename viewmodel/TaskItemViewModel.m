@@ -17,7 +17,7 @@
     
     self.title = task.title;
     self.isCompleted = task.isCompleted;
-    self.due = [DueDateRenderer render:task.dueDate];
+    self.due = task.isOverdue ? @"Overdue" : [DueDateRenderer render:task.dueDate];
     
     return self;
 }

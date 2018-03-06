@@ -35,6 +35,7 @@
 		F77DFB7A204E8D9000793407 /* TaskItemViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F77DFB79204E8D9000793407 /* TaskItemViewModel.m */; };
 		F7AC56D3204E930F00BDDE84 /* TaskDetailViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F7AC56D2204E930F00BDDE84 /* TaskDetailViewModel.m */; };
 		F7AC56DC204E9EB400BDDE84 /* DueDateRenderer.m in Sources */ = {isa = PBXBuildFile; fileRef = F7AC56DB204E9EB400BDDE84 /* DueDateRenderer.m */; };
+		F7AC56DF204EAACD00BDDE84 /* TaskItemViewModelTest.m in Sources */ = {isa = PBXBuildFile; fileRef = F7AC56DE204EAACD00BDDE84 /* TaskItemViewModelTest.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -184,6 +185,7 @@
 		F7AC56D2204E930F00BDDE84 /* TaskDetailViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TaskDetailViewModel.m; sourceTree = "<group>"; };
 		F7AC56DA204E9EB400BDDE84 /* DueDateRenderer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DueDateRenderer.h; sourceTree = "<group>"; };
 		F7AC56DB204E9EB400BDDE84 /* DueDateRenderer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DueDateRenderer.m; sourceTree = "<group>"; };
+		F7AC56DE204EAACD00BDDE84 /* TaskItemViewModelTest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TaskItemViewModelTest.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -266,6 +268,7 @@
 				A0B30B22203ADBF800645AD6 /* TaskTest.m */,
 				F7592511204016FB006C96CD /* ManageTaskTest.m */,
 				F759251D2043B7F3006C96CD /* TaskListViewModelTest.m */,
+				F7AC56DE204EAACD00BDDE84 /* TaskItemViewModelTest.m */,
 			);
 			path = tasksTests;
 			sourceTree = "<group>";
@@ -646,6 +649,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F7AC56DF204EAACD00BDDE84 /* TaskItemViewModelTest.m in Sources */,
 				A0B30B23203ADBF800645AD6 /* TaskTest.m in Sources */,
 				F759251E2043B7F3006C96CD /* TaskListViewModelTest.m in Sources */,
 				F7592512204016FB006C96CD /* ManageTaskTest.m in Sources */,
