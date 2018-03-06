@@ -61,6 +61,8 @@ NSString* taskEntityName = @"TaskMO";
     TaskMO* taskMO = [self createTaskMO];
    
     Task* newTask = [Task new];
+    newTask.title = title;
+    
     [CoreDataTaskRepository saveToTaskMO:taskMO task:newTask];
 
     [self save];

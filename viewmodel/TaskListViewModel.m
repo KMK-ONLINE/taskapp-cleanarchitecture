@@ -32,6 +32,10 @@
     self.tasks = [self.manageTask getAllTasks];
 }
 
+-(void) addTaskWithTitle:(NSString*) title {
+    [self.manageTask addTaskWithTitle:title];
+}
+
 -(NSInteger) taskCount {
     return self.tasks.count;
 }

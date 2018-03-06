@@ -58,7 +58,7 @@
                     <navigationItem key="navigationItem" title="Tasks" id="IZQ-0J-xcS">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="inm-fA-baA">
                             <connections>
-                                <segue destination="MpX-de-u7w" kind="show" id="BaL-cM-qaF"/>
+                                <action selector="addTask:" destination="8l4-wg-P2G" id="crf-D1-g05"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -69,65 +69,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="isn-PH-SwU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1184.8" y="117.39130434782609"/>
-        </scene>
-        <!--Add Task-->
-        <scene sceneID="rKd-mq-PKj">
-            <objects>
-                <viewController id="MpX-de-u7w" customClass="AddTaskViewController" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="Weq-os-ej6">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="K7N-OP-HW1">
-                                <rect key="frame" x="20" y="84" width="335" height="563"/>
-                                <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="moc-j7-BOj">
-                                        <rect key="frame" x="0.0" y="0.0" width="335" height="30"/>
-                                        <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YEC-QJ-rQs">
-                                                <rect key="frame" x="0.0" y="0.0" width="33.5" height="30"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="LHM-4t-AFp">
-                                                <rect key="frame" x="53.5" y="0.0" width="281.5" height="30"/>
-                                                <nil key="textColor"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits"/>
-                                            </textField>
-                                        </subviews>
-                                    </stackView>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tnj-Wo-Yyi">
-                                        <rect key="frame" x="0.0" y="30" width="335" height="533"/>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                    </view>
-                                </subviews>
-                            </stackView>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <constraints>
-                            <constraint firstItem="K7N-OP-HW1" firstAttribute="leading" secondItem="Pth-TU-oF9" secondAttribute="leading" constant="20" id="JEc-d6-qv6"/>
-                            <constraint firstItem="Pth-TU-oF9" firstAttribute="bottom" secondItem="K7N-OP-HW1" secondAttribute="bottom" constant="20" id="MqT-Js-KGa"/>
-                            <constraint firstItem="K7N-OP-HW1" firstAttribute="top" secondItem="Pth-TU-oF9" secondAttribute="top" constant="20" id="aGT-Zm-NuG"/>
-                            <constraint firstItem="Pth-TU-oF9" firstAttribute="trailing" secondItem="K7N-OP-HW1" secondAttribute="trailing" constant="20" id="cmU-wb-oW4"/>
-                        </constraints>
-                        <viewLayoutGuide key="safeArea" id="Pth-TU-oF9"/>
-                    </view>
-                    <navigationItem key="navigationItem" title="Add Task" id="moz-oW-hGE">
-                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="DGI-0d-JSO">
-                            <connections>
-                                <action selector="save:" destination="MpX-de-u7w" id="KsQ-ab-yep"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
-                    <connections>
-                        <outlet property="titleTextField" destination="LHM-4t-AFp" id="KeC-Uh-TOv"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Sji-kI-qZ7" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1185" y="821"/>
         </scene>
         <!--Task Detail View Controller-->
         <scene sceneID="MZR-YU-Nwe">

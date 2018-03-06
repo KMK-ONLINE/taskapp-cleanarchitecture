@@ -60,6 +60,8 @@
     [self performSegueWithIdentifier:@"openTask" sender:self];
 }
 
+#pragma mark -
+
 -(void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     NSIndexPath* selectedIndexPath = self.tableView.indexPathForSelectedRow;
     if(selectedIndexPath == nil) return;
@@ -69,6 +71,46 @@
 
     TaskDetailViewController* taskDetailViewcontroller = (TaskDetailViewController*) segue.destinationViewController;
     taskDetailViewcontroller.viewModel = taskDetailVM;
+}
+
+- (IBAction)addTask:(id)sender {
+    [self promptAndHandleAddTask];
+}
+
+#pragma mark - private
+
+-(void) promptAndHandleAddTask {
+    UIAlertController* alertController =
+    [UIAlertController alertControllerWithTitle:@"Add Task"
+                                        message:@""
+                                 preferredStyle:UIAlertControllerStyleAlert];
+   
+    [alertController addTextFieldWithConfigurationHandler:^(UITextField*  textField) {
+    }];
+    
+    UIAlertAction* saveAction =
+    [UIAlertAction actionWithTitle:@"Save"
+                             style:UIAlertActionStyleDefault
+                           handler:^(UIAlertAction * action) {
+                               NSString* title = alertController.textFields.firstObject.text;
+                               if(![title isEqualToString:@""]) {
+                                   [self.viewModel addTaskWithTitle:title];
+                                   [self.viewModel refreshData];
+                                   [self.tableView reloadData];
+                               }
+                           }];
+    
+    UIAlertAction* cancelAction =
+    [UIAlertAction actionWithTitle:@"Cancel"
+                             style:UIAlertActionStyleDefault
+                           handler:^(UIAlertAction * action) {
+                           }];
+    
+    [alertController addAction:saveAction];
+    [alertController addAction:cancelAction];
+    
+    [self presentViewController:alertController animated:YES completion:^{
+    }];
 }
 
 -(void) clearSelectedItem:(BOOL) animated {

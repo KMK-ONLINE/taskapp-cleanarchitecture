@@ -22,7 +22,6 @@
 		F70ADFC72045110E00EFE025 /* ReactiveObjC.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F70ADFBE204510CA00EFE025 /* ReactiveObjC.framework */; };
 		F70ADFCA2045114F00EFE025 /* ReactiveObjC.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = F70ADFBE204510CA00EFE025 /* ReactiveObjC.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		F70ADFCF2045494200EFE025 /* TaskDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F70ADFCE2045494200EFE025 /* TaskDetailViewController.m */; };
-		F70ADFE32047F03500EFE025 /* AddTaskViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F70ADFE22047F03500EFE025 /* AddTaskViewController.m */; };
 		F70ADFEE2048F93E00EFE025 /* CoreDataTaskRepository.m in Sources */ = {isa = PBXBuildFile; fileRef = F70ADFED2048F93E00EFE025 /* CoreDataTaskRepository.m */; };
 		F70F7AA22043EE6A00692058 /* TaskTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F70F7AA12043EE6A00692058 /* TaskTableViewCell.m */; };
 		F70F7AA52043F17F00692058 /* TaskListViewModelFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = F70F7AA42043F17F00692058 /* TaskListViewModelFactory.m */; };
@@ -159,8 +158,6 @@
 		F70ADFAF204510CA00EFE025 /* ReactiveObjC.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = ReactiveObjC.xcodeproj; path = ReactiveObjC/ReactiveObjC.xcodeproj; sourceTree = "<group>"; };
 		F70ADFCD2045494200EFE025 /* TaskDetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TaskDetailViewController.h; sourceTree = "<group>"; };
 		F70ADFCE2045494200EFE025 /* TaskDetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TaskDetailViewController.m; sourceTree = "<group>"; };
-		F70ADFE12047F03500EFE025 /* AddTaskViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AddTaskViewController.h; sourceTree = "<group>"; };
-		F70ADFE22047F03500EFE025 /* AddTaskViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AddTaskViewController.m; sourceTree = "<group>"; };
 		F70ADFEC2048F93E00EFE025 /* CoreDataTaskRepository.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CoreDataTaskRepository.h; sourceTree = "<group>"; };
 		F70ADFED2048F93E00EFE025 /* CoreDataTaskRepository.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CoreDataTaskRepository.m; sourceTree = "<group>"; };
 		F70F7AA02043EE6A00692058 /* TaskTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TaskTableViewCell.h; sourceTree = "<group>"; };
@@ -258,8 +255,6 @@
 				F70F7AA12043EE6A00692058 /* TaskTableViewCell.m */,
 				F70ADFCD2045494200EFE025 /* TaskDetailViewController.h */,
 				F70ADFCE2045494200EFE025 /* TaskDetailViewController.m */,
-				F70ADFE12047F03500EFE025 /* AddTaskViewController.h */,
-				F70ADFE22047F03500EFE025 /* AddTaskViewController.m */,
 			);
 			path = tasks;
 			sourceTree = "<group>";
@@ -637,7 +632,6 @@
 				F70ADFEE2048F93E00EFE025 /* CoreDataTaskRepository.m in Sources */,
 				F7AC56D3204E930F00BDDE84 /* TaskDetailViewModel.m in Sources */,
 				A001316D203AD17F0048E565 /* AppDelegate.m in Sources */,
-				F70ADFE32047F03500EFE025 /* AddTaskViewController.m in Sources */,
 				F70ADF4C2044057000EFE025 /* InMemoryTaskRepository.m in Sources */,
 				F75925172040214A006C96CD /* ManageTaskImpl.m in Sources */,
 				F70ADFCF2045494200EFE025 /* TaskDetailViewController.m in Sources */,

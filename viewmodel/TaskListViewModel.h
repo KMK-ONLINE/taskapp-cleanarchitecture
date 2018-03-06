@@ -18,6 +18,7 @@
 -(instancetype) initWithManageTask:(id<ManageTask>) manageTask;
 
 -(void) refreshData;
+-(void) addTaskWithTitle:(NSString*) title;
 -(TaskItemViewModel*) createTaskItemVMOnIndex:(NSInteger) index;
 -(TaskDetailViewModel*) createTaskDetailVMForIndex:(NSInteger) index;
 

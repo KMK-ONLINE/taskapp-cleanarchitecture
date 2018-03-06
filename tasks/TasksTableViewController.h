@@ -10,4 +10,6 @@
 
 @interface TasksTableViewController : UITableViewController
 
+- (IBAction)addTask:(id)sender;
+
 @end
