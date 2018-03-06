@@ -8,12 +8,13 @@
 
 #import <UIKit/UIKit.h>
 #import "TaskData.h"
+#import "TaskDetailViewModel.h"
 
 @interface TaskDetailViewController : UIViewController
 
 @property (weak, nonatomic) IBOutlet UISwitch *completedSwitch;
 @property (weak, nonatomic) IBOutlet UITextField *dueTextField;
-@property(nonatomic, strong) TaskData* task;
+@property(nonatomic, strong) TaskDetailViewModel* viewModel;
 
 - (IBAction)delete:(id)sender;
 - (IBAction)completedSwitchToggled:(id)sender;

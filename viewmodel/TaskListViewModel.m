@@ -36,18 +36,18 @@
     return self.tasks.count;
 }
 
--(TaskData*) getTaskDataOnIndex:(NSInteger) index {
-    if(![self hasTaskForIndex:index]) return [TaskData new];
-    return self.tasks[index];
-}
-
--(TaskItemViewModel*) getTaskItemVMOnIndex:(NSInteger) index {
+-(TaskItemViewModel*) createTaskItemVMOnIndex:(NSInteger) index {
     if(![self hasTaskForIndex:index]) return [TaskItemViewModel new];
     
     TaskData* task = self.tasks[index];
-    TaskItemViewModel* taskVM = [[TaskItemViewModel alloc] initWithTask:task];
+    return [[TaskItemViewModel alloc] initWithTask:task];
+}
+
+-(TaskDetailViewModel*) createTaskDetailVMForIndex:(NSInteger) index {
+    if(![self hasTaskForIndex:index]) return [TaskDetailViewModel new];
     
-    return taskVM;
+    TaskData* task = self.tasks[index];
+    return [[TaskDetailViewModel alloc] initWithTask:task manageTask:self.manageTask];
 }
 
 #pragma mark -

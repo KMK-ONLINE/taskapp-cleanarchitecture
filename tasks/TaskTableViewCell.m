@@ -14,10 +14,10 @@
     [super awakeFromNib];
 }
 
--(void) setTask:(TaskItemViewModel*) task {
-    self.textLabel.text = task.title;
-    [self setChecked:task.isCompleted];
-    self.detailTextLabel.text = task.due;
+-(void) setViewModel:(TaskItemViewModel*) viewModel {
+    self.textLabel.text = viewModel.title;
+    [self setChecked:viewModel.isCompleted];
+    self.detailTextLabel.text = viewModel.due;
 }
 
 -(void) setChecked:(BOOL) isCompleted {

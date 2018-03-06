@@ -11,6 +11,6 @@
 
 @interface TaskTableViewCell : UITableViewCell
 
--(void) setTask:(TaskItemViewModel*) task;
+-(void) setViewModel:(TaskItemViewModel*) viewModel;
 
 @end

@@ -49,9 +49,9 @@
                                                             forIndexPath:indexPath];
    
     TaskTableViewCell* taskCell = (TaskTableViewCell*) cell;
-    TaskItemViewModel* task = [self.viewModel getTaskItemVMOnIndex:indexPath.row];
+    TaskItemViewModel* task = [self.viewModel createTaskItemVMOnIndex:indexPath.row];
     
-    [taskCell setTask:task];
+    [taskCell setViewModel:task];
 
     return cell;
 }
@@ -64,10 +64,11 @@
     NSIndexPath* selectedIndexPath = self.tableView.indexPathForSelectedRow;
     if(selectedIndexPath == nil) return;
     
-    TaskData* task = [self.viewModel getTaskDataOnIndex:selectedIndexPath.row];
+    TaskDetailViewModel* taskDetailVM =
+    [self.viewModel createTaskDetailVMForIndex:selectedIndexPath.row];
 
     TaskDetailViewController* taskDetailViewcontroller = (TaskDetailViewController*) segue.destinationViewController;
-    taskDetailViewcontroller.task = task;
+    taskDetailViewcontroller.viewModel = taskDetailVM;
 }
 
 -(void) clearSelectedItem:(BOOL) animated {

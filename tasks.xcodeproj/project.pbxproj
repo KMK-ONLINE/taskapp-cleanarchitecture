@@ -34,6 +34,7 @@
 		F759251E2043B7F3006C96CD /* TaskListViewModelTest.m in Sources */ = {isa = PBXBuildFile; fileRef = F759251D2043B7F3006C96CD /* TaskListViewModelTest.m */; };
 		F75925222043B88C006C96CD /* TaskListViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F75925212043B88C006C96CD /* TaskListViewModel.m */; };
 		F77DFB7A204E8D9000793407 /* TaskItemViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F77DFB79204E8D9000793407 /* TaskItemViewModel.m */; };
+		F7AC56D3204E930F00BDDE84 /* TaskDetailViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F7AC56D2204E930F00BDDE84 /* TaskDetailViewModel.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -181,6 +182,8 @@
 		F75925212043B88C006C96CD /* TaskListViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TaskListViewModel.m; sourceTree = "<group>"; };
 		F77DFB78204E8D9000793407 /* TaskItemViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TaskItemViewModel.h; sourceTree = "<group>"; };
 		F77DFB79204E8D9000793407 /* TaskItemViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TaskItemViewModel.m; sourceTree = "<group>"; };
+		F7AC56D1204E930F00BDDE84 /* TaskDetailViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TaskDetailViewModel.h; sourceTree = "<group>"; };
+		F7AC56D2204E930F00BDDE84 /* TaskDetailViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TaskDetailViewModel.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -412,6 +415,8 @@
 				F75925212043B88C006C96CD /* TaskListViewModel.m */,
 				F77DFB78204E8D9000793407 /* TaskItemViewModel.h */,
 				F77DFB79204E8D9000793407 /* TaskItemViewModel.m */,
+				F7AC56D1204E930F00BDDE84 /* TaskDetailViewModel.h */,
+				F7AC56D2204E930F00BDDE84 /* TaskDetailViewModel.m */,
 			);
 			path = viewmodel;
 			sourceTree = "<group>";
@@ -616,6 +621,7 @@
 				F759251520401889006C96CD /* TaskData.m in Sources */,
 				F759250C20401188006C96CD /* TasksTableViewController.m in Sources */,
 				F70ADFEE2048F93E00EFE025 /* CoreDataTaskRepository.m in Sources */,
+				F7AC56D3204E930F00BDDE84 /* TaskDetailViewModel.m in Sources */,
 				A001316D203AD17F0048E565 /* AppDelegate.m in Sources */,
 				F70ADFE32047F03500EFE025 /* AddTaskViewController.m in Sources */,
 				F70ADF4C2044057000EFE025 /* InMemoryTaskRepository.m in Sources */,

@@ -28,17 +28,17 @@
 }
 
 - (void)viewWillAppear:(BOOL)animated {
-    if(self.task == nil) return;
-    [self loadTaskData];
+    if(self.viewModel == nil) return;
+    [self bindViewModel];
 }
 
 - (IBAction)delete:(id)sender {
-    [self.manageTask deleteTaskWithId:self.task.taskId];
+    [self.viewModel delete];
     [self.navigationController popViewControllerAnimated:true];
 }
 
 - (IBAction)completedSwitchToggled:(id)sender {
-    [self.manageTask toggleCompletedTaskWithId:self.task.taskId];
+    [self.viewModel toggleCompleted];
 }
 
 #pragma mark - datePicking handler
@@ -48,18 +48,16 @@
 }
 
 -(void)dueDatePickingDone:(id) sender {
-    self.dueTextField.text = [TaskDetailViewController renderDate:self.dueDatePicker.date];
-    [self.manageTask changeDueForTaskWithId:self.task.taskId dueDate:self.dueDatePicker.date];
+    [self.viewModel changeDue:self.dueDatePicker.date];
     [self.dueTextField resignFirstResponder];
 }
 
 #pragma mark - private
 
-+(NSString*) renderDate:(NSDate*) date {
-    return
-    [NSDateFormatter localizedStringFromDate:date
-                                   dateStyle:NSDateFormatterShortStyle
-                                   timeStyle:NSDateFormatterShortStyle];
+-(void) bindViewModel {
+    self.navigationItem.title = self.viewModel.title;
+    [self.completedSwitch setOn:self.viewModel.isCompleted];
+    RAC(self.dueTextField, text) = RACObserve(self.viewModel, due);
 }
 
 -(void) setupDueDatePicker {
@@ -91,11 +89,5 @@
     self.dueTextField.inputAccessoryView = bar;
 }
 
--(void) loadTaskData {
-    self.navigationItem.title = self.task.title;
-    [self.completedSwitch setOn:self.task.isCompleted];
-    
-    self.dueTextField.text = [TaskDetailViewController renderDate:self.task.dueDate];
-}
 
 @end
