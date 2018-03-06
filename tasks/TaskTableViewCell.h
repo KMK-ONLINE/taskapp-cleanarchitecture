@@ -7,10 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "TaskData.h"
+#import "TaskItemViewModel.h"
 
 @interface TaskTableViewCell : UITableViewCell
 
--(void) setTask:(TaskData*) task;
+-(void) setTask:(TaskItemViewModel*) task;
 
 @end

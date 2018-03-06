@@ -8,6 +8,7 @@
 
 #import "TaskListViewModel.h"
 #import "TaskData.h"
+#import "TaskItemViewModel.h"
 
 @interface TaskListViewModel()
 
@@ -35,10 +36,21 @@
     return self.tasks.count;
 }
 
--(TaskData*) getTaskOnIndex:(NSInteger) index {
+-(TaskData*) getTaskDataOnIndex:(NSInteger) index {
     if(![self hasTaskForIndex:index]) return [TaskData new];
     return self.tasks[index];
 }
+
+-(TaskItemViewModel*) getTaskItemVMOnIndex:(NSInteger) index {
+    if(![self hasTaskForIndex:index]) return [TaskItemViewModel new];
+    
+    TaskData* task = self.tasks[index];
+    TaskItemViewModel* taskVM = [[TaskItemViewModel alloc] initWithTask:task];
+    
+    return taskVM;
+}
+
+#pragma mark -
 
 -(BOOL) hasTaskForIndex:(NSInteger) index {
     return self.taskCount > 0 && index >= 0 && index < self.taskCount;

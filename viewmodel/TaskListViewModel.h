@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import "ManageTask.h"
-#import "TaskData.h"
+#import "TaskItemViewModel.h"
 
 @interface TaskListViewModel : NSObject
 
@@ -17,6 +17,7 @@
 -(instancetype) initWithManageTask:(id<ManageTask>) manageTask;
 
 -(void) refreshData;
--(TaskData*) getTaskOnIndex:(NSInteger) index;
+-(TaskData*) getTaskDataOnIndex:(NSInteger) index;
+-(TaskItemViewModel*) getTaskItemVMOnIndex:(NSInteger) index;
 
 @end

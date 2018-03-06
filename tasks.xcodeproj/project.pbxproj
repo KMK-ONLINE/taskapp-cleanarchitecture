@@ -33,6 +33,7 @@
 		F75925172040214A006C96CD /* ManageTaskImpl.m in Sources */ = {isa = PBXBuildFile; fileRef = F75925162040214A006C96CD /* ManageTaskImpl.m */; };
 		F759251E2043B7F3006C96CD /* TaskListViewModelTest.m in Sources */ = {isa = PBXBuildFile; fileRef = F759251D2043B7F3006C96CD /* TaskListViewModelTest.m */; };
 		F75925222043B88C006C96CD /* TaskListViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F75925212043B88C006C96CD /* TaskListViewModel.m */; };
+		F77DFB7A204E8D9000793407 /* TaskItemViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F77DFB79204E8D9000793407 /* TaskItemViewModel.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -178,6 +179,8 @@
 		F759251D2043B7F3006C96CD /* TaskListViewModelTest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TaskListViewModelTest.m; sourceTree = "<group>"; };
 		F75925202043B88C006C96CD /* TaskListViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TaskListViewModel.h; sourceTree = "<group>"; };
 		F75925212043B88C006C96CD /* TaskListViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TaskListViewModel.m; sourceTree = "<group>"; };
+		F77DFB78204E8D9000793407 /* TaskItemViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TaskItemViewModel.h; sourceTree = "<group>"; };
+		F77DFB79204E8D9000793407 /* TaskItemViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TaskItemViewModel.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -407,6 +410,8 @@
 				F70F7AAA2043F56A00692058 /* factory */,
 				F75925202043B88C006C96CD /* TaskListViewModel.h */,
 				F75925212043B88C006C96CD /* TaskListViewModel.m */,
+				F77DFB78204E8D9000793407 /* TaskItemViewModel.h */,
+				F77DFB79204E8D9000793407 /* TaskItemViewModel.m */,
 			);
 			path = viewmodel;
 			sourceTree = "<group>";
@@ -616,6 +621,7 @@
 				F70ADF4C2044057000EFE025 /* InMemoryTaskRepository.m in Sources */,
 				F75925172040214A006C96CD /* ManageTaskImpl.m in Sources */,
 				F70ADFCF2045494200EFE025 /* TaskDetailViewController.m in Sources */,
+				F77DFB7A204E8D9000793407 /* TaskItemViewModel.m in Sources */,
 				A001317E203AD17F0048E565 /* main.m in Sources */,
 				A0013176203AD17F0048E565 /* tasks.xcdatamodeld in Sources */,
 				F70F7AA52043F17F00692058 /* TaskListViewModelFactory.m in Sources */,

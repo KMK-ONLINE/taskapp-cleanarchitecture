@@ -49,7 +49,7 @@
                                                             forIndexPath:indexPath];
    
     TaskTableViewCell* taskCell = (TaskTableViewCell*) cell;
-    TaskData* task = [self.viewModel getTaskOnIndex:indexPath.row];
+    TaskItemViewModel* task = [self.viewModel getTaskItemVMOnIndex:indexPath.row];
     
     [taskCell setTask:task];
 
@@ -64,7 +64,7 @@
     NSIndexPath* selectedIndexPath = self.tableView.indexPathForSelectedRow;
     if(selectedIndexPath == nil) return;
     
-    TaskData* task = [self.viewModel getTaskOnIndex:selectedIndexPath.row];
+    TaskData* task = [self.viewModel getTaskDataOnIndex:selectedIndexPath.row];
 
     TaskDetailViewController* taskDetailViewcontroller = (TaskDetailViewController*) segue.destinationViewController;
     taskDetailViewcontroller.task = task;
