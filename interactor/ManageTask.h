@@ -15,5 +15,6 @@
 -(void) addTaskWithTitle:(NSString*) title;
 -(void) deleteTaskWithId:(NSString*) taskId;
 -(TaskData*) toggleCompletedTaskWithId:(NSString*) taskId;
+-(void) changeDueForTaskWithId:(NSString*) taskId dueDate:(NSDate*) dueDate;
 
 @end

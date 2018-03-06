@@ -12,6 +12,7 @@
 @interface TaskDetailViewController : UIViewController
 
 @property (weak, nonatomic) IBOutlet UISwitch *completedSwitch;
+@property (weak, nonatomic) IBOutlet UITextField *dueTextField;
 @property(nonatomic, strong) TaskData* task;
 
 - (IBAction)delete:(id)sender;

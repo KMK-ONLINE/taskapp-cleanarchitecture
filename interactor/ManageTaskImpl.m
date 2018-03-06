@@ -52,6 +52,12 @@
     return [ManageTaskImpl createTaskDataFrom:task];
 }
 
+-(void) changeDueForTaskWithId:(NSString*) taskId dueDate:(NSDate*) dueDate {
+    Task* task = [self.taskRepository getTaskWithId:taskId];
+    task.dueDate = dueDate;
+    [self.taskRepository save:task];
+}
+
 #pragma mark - private
 
 +(TaskData*) createTaskDataFrom:(Task*) task {
