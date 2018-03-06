@@ -18,6 +18,7 @@
     self.textLabel.text = viewModel.title;
     [self setChecked:viewModel.isCompleted];
     self.detailTextLabel.text = viewModel.due;
+    self.backgroundColor = viewModel.backgroundColor;
 }
 
 -(void) setChecked:(BOOL) isCompleted {
