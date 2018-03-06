@@ -224,8 +224,7 @@
 				F70ADFEA204813D800EFE025 /* domain */,
 				F70ADFEB2048F91100EFE025 /* adapter */,
 				A001316A203AD17F0048E565 /* tasks */,
-				A0013186203AD17F0048E565 /* tasksTests */,
-				A0013191203AD17F0048E565 /* tasksUITests */,
+				F7AC56DD204EA05100BDDE84 /* tests */,
 				A0013169203AD17F0048E565 /* Products */,
 				F70ADF5D20440E7700EFE025 /* Frameworks */,
 				F70ADF4E20440E1200EFE025 /* libs */,
@@ -424,6 +423,15 @@
 				F7AC56DB204E9EB400BDDE84 /* DueDateRenderer.m */,
 			);
 			path = viewmodel;
+			sourceTree = "<group>";
+		};
+		F7AC56DD204EA05100BDDE84 /* tests */ = {
+			isa = PBXGroup;
+			children = (
+				A0013186203AD17F0048E565 /* tasksTests */,
+				A0013191203AD17F0048E565 /* tasksUITests */,
+			);
+			name = tests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
