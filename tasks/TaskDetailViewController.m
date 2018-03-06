@@ -24,6 +24,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.manageTask = [ManageTaskFactory sharedInstance];
+    [self setupDueDatePicker];
 }
 
 - (void)viewWillAppear:(BOOL)animated {

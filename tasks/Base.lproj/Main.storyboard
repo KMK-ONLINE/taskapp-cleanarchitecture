@@ -197,7 +197,6 @@
                     <connections>
                         <outlet property="completedSwitch" destination="JPU-Oc-l4u" id="BYi-Jw-mte"/>
                         <outlet property="dueTextField" destination="IKk-ce-wWX" id="UXU-xr-2hI"/>
-                        <outlet property="titleTextField" destination="To8-np-Taw" id="eTv-kE-i4p"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8Hz-nE-dZy" userLabel="First Responder" sceneMemberID="firstResponder"/>
