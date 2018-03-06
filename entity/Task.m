@@ -8,12 +8,6 @@
 
 #import "Task.h"
 
-@interface Task()
-
-@property (nonatomic, assign) BOOL completed;
-
-@end
-
 @implementation Task
 
 - (instancetype)init
@@ -22,7 +16,7 @@
     if(!self) return self;
     
     self.taskId = 0;
-    self.completed = false;
+    self.isCompleted = NO;
     self.title = @"New Task";
     self.dueDate = [NSDate distantFuture];
     
@@ -30,11 +24,13 @@
 }
 
 -(void) toggleCompleted {
-    self.completed = !self.completed;
+    self.isCompleted = !self.isCompleted;
 }
 
 -(BOOL) isOverdueOn:(NSDate*) referenceDate {
-    return [self.dueDate compare:referenceDate] == NSOrderedDescending;
+    return
+        !self.isCompleted &&
+        [self.dueDate compare:referenceDate] == NSOrderedAscending;
 }
 
 @end

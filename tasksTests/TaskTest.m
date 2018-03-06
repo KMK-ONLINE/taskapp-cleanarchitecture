@@ -19,6 +19,7 @@
     Task* task = [Task new];
     XCTAssertFalse(task.isCompleted);
     XCTAssertTrue([task.title isEqualToString:@"New Task"]);
+    XCTAssertEqual(task.dueDate, [NSDate distantFuture]);
 }
 
 - (void) testToggleCompleted {
@@ -36,8 +37,21 @@
     NSDate* oneHourLater = [NSDate dateWithTimeIntervalSinceNow:3600];
     
     task.dueDate = currentDateTime;
-    XCTAssertTrue([task isOverdueOn:oneHourBefore]);
-    XCTAssertFalse([task isOverdueOn:oneHourLater]);
+    XCTAssertFalse([task isOverdueOn:oneHourBefore]);
+    XCTAssertTrue([task isOverdueOn:oneHourLater]);
+}
+
+-(void) testShouldNotDueOnCompleted {
+
+    NSDate* currentDateTime = [NSDate date];
+    NSDate* oneHourBefore = [NSDate dateWithTimeIntervalSinceNow:-3600];
+    
+    Task* task = [Task new];
+    task.dueDate = oneHourBefore;
+    
+    XCTAssertTrue([task isOverdueOn:currentDateTime]);
+    [task toggleCompleted];
+    XCTAssertFalse([task isOverdueOn:currentDateTime]);
 }
 
 @end
