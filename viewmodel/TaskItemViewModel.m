@@ -8,6 +8,7 @@
 
 #import "TaskItemViewModel.h"
 #import "DueDateRenderer.h"
+#import "UIColor+Preset.h"
 
 @implementation TaskItemViewModel
 
@@ -18,9 +19,7 @@
     self.title = task.title;
     self.isCompleted = task.isCompleted;
     self.due = task.isOverdue ? @"Overdue" : [DueDateRenderer render:task.dueDate];
-    
-    UIColor* overdueColor = [UIColor colorWithRed:241.0/255 green:169.0/255 blue:169.0/255 alpha:1];
-    self.backgroundColor = task.isOverdue ?  overdueColor : UIColor.whiteColor;
+    self.backgroundColor = task.isOverdue ?  [UIColor lightRed] : UIColor.whiteColor;
     
     return self;
 }

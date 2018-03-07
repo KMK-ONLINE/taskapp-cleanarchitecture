@@ -9,6 +9,7 @@
 #import <XCTest/XCTest.h>
 #import "TaskItemViewModel.h"
 #import "TaskData.h"
+#import "UIColor+Preset.h"
 
 @interface TaskItemViewModelTest : XCTestCase
 
@@ -22,6 +23,7 @@
     
     TaskItemViewModel* viewModel = [[TaskItemViewModel alloc] initWithTask:overdueTask];
     XCTAssertTrue([viewModel.due isEqualToString:@"Overdue"]);
+    XCTAssertTrue([viewModel.backgroundColor isEqual:[UIColor lightRed]]);
 }
 
 - (void)testNonOverdueRendering {
@@ -30,6 +32,7 @@
     
     TaskItemViewModel* viewModel = [[TaskItemViewModel alloc] initWithTask:task];
     XCTAssertTrue([viewModel.due isEqualToString:@"No Due"]);
+    XCTAssertTrue([viewModel.backgroundColor isEqual:[UIColor whiteColor]]);
 }
 
 @end

@@ -36,6 +36,7 @@
 		F7AC56D3204E930F00BDDE84 /* TaskDetailViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F7AC56D2204E930F00BDDE84 /* TaskDetailViewModel.m */; };
 		F7AC56DC204E9EB400BDDE84 /* DueDateRenderer.m in Sources */ = {isa = PBXBuildFile; fileRef = F7AC56DB204E9EB400BDDE84 /* DueDateRenderer.m */; };
 		F7AC56DF204EAACD00BDDE84 /* TaskItemViewModelTest.m in Sources */ = {isa = PBXBuildFile; fileRef = F7AC56DE204EAACD00BDDE84 /* TaskItemViewModelTest.m */; };
+		F7AC56E2204F9DC800BDDE84 /* UIColor+Preset.m in Sources */ = {isa = PBXBuildFile; fileRef = F7AC56E1204F9DC800BDDE84 /* UIColor+Preset.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -186,6 +187,8 @@
 		F7AC56DA204E9EB400BDDE84 /* DueDateRenderer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DueDateRenderer.h; sourceTree = "<group>"; };
 		F7AC56DB204E9EB400BDDE84 /* DueDateRenderer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DueDateRenderer.m; sourceTree = "<group>"; };
 		F7AC56DE204EAACD00BDDE84 /* TaskItemViewModelTest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TaskItemViewModelTest.m; sourceTree = "<group>"; };
+		F7AC56E0204F9D6B00BDDE84 /* UIColor+Preset.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIColor+Preset.h"; sourceTree = "<group>"; };
+		F7AC56E1204F9DC800BDDE84 /* UIColor+Preset.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Preset.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -419,6 +422,8 @@
 				F7AC56D2204E930F00BDDE84 /* TaskDetailViewModel.m */,
 				F7AC56DA204E9EB400BDDE84 /* DueDateRenderer.h */,
 				F7AC56DB204E9EB400BDDE84 /* DueDateRenderer.m */,
+				F7AC56E0204F9D6B00BDDE84 /* UIColor+Preset.h */,
+				F7AC56E1204F9DC800BDDE84 /* UIColor+Preset.m */,
 			);
 			path = viewmodel;
 			sourceTree = "<group>";
@@ -625,6 +630,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F7AC56E2204F9DC800BDDE84 /* UIColor+Preset.m in Sources */,
 				A0B30B26203ADC3C00645AD6 /* Task.m in Sources */,
 				F75925222043B88C006C96CD /* TaskListViewModel.m in Sources */,
 				F70F7AA82043F47600692058 /* ManageTaskFactory.m in Sources */,
