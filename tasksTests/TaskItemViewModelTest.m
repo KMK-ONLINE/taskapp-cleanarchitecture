@@ -19,8 +19,9 @@
 
 - (void)testOverdueRendering {
     TaskData* overdueTask = [TaskData new];
+    overdueTask.title = @"New Task";
     overdueTask.isOverdue = YES;
-    
+
     TaskItemViewModel* viewModel = [[TaskItemViewModel alloc] initWithTask:overdueTask];
     XCTAssertTrue([viewModel.due isEqualToString:@"Overdue"]);
     XCTAssertTrue([viewModel.backgroundColor isEqual:[UIColor lightRed]]);
@@ -28,6 +29,7 @@
 
 - (void)testNonOverdueRendering {
     TaskData* task = [TaskData new];
+    task.title = @"New Task";
     task.dueDate = [NSDate distantFuture];
     
     TaskItemViewModel* viewModel = [[TaskItemViewModel alloc] initWithTask:task];

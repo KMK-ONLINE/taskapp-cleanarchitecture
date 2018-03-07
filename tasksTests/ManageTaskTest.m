@@ -10,6 +10,7 @@
 #import <OCMock/OCMock.h>
 #import "ManageTaskImpl.h"
 #import "TaskRepository.h"
+#import "ReminderService.h"
 
 @interface ManageTaskTest : XCTestCase
 
@@ -22,7 +23,11 @@
     id taskRepository = OCMProtocolMock(@protocol(TaskRepository));
     OCMStub([taskRepository getAllTasks]).andReturn([self createSampleTasks]);
     
-    ManageTaskImpl* manageTask = [[ManageTaskImpl alloc] initWithTaskRepository:taskRepository];
+    id reminderService = OCMProtocolMock(@protocol(ReminderService));
+    
+    ManageTaskImpl* manageTask = [[ManageTaskImpl alloc]
+                                  initWithTaskRepository:taskRepository
+                                  reminderService:reminderService];
     
     NSArray<TaskData*>* tasks = [manageTask getAllTasks];
     
@@ -39,7 +44,11 @@
     OCMStub([taskRepository getAllTasks]).andReturn(@[task1]);
     OCMStub([taskRepository getTaskWithId:task1.taskId]).andReturn(task1);
     
-    ManageTaskImpl* manageTask = [[ManageTaskImpl alloc] initWithTaskRepository:taskRepository];
+    id reminderService = OCMProtocolMock(@protocol(ReminderService));
+    
+    ManageTaskImpl* manageTask = [[ManageTaskImpl alloc]
+                                  initWithTaskRepository:taskRepository
+                                  reminderService:reminderService];
     
     TaskData* initialTask = [manageTask getAllTasks].firstObject;
     TaskData* toggledTask = [manageTask toggleCompletedTaskWithId:initialTask.taskId];
@@ -53,7 +62,11 @@
 
 -(void) testAddTask {
     id taskRepository = OCMProtocolMock(@protocol(TaskRepository));
-    ManageTaskImpl* manageTask = [[ManageTaskImpl alloc] initWithTaskRepository:taskRepository];
+    id reminderService = OCMProtocolMock(@protocol(ReminderService));
+    ManageTaskImpl* manageTask = [[ManageTaskImpl alloc]
+                                  initWithTaskRepository:taskRepository
+                                  reminderService:reminderService];
+    
     NSString* taskTitle = @"My New Task";
     
     [manageTask addTaskWithTitle:taskTitle];
@@ -63,7 +76,10 @@
 
 -(void) testDeleteTask {
     id taskRepository = OCMProtocolMock(@protocol(TaskRepository));
-    ManageTaskImpl* manageTask = [[ManageTaskImpl alloc] initWithTaskRepository:taskRepository];
+    id reminderService = OCMProtocolMock(@protocol(ReminderService));
+    ManageTaskImpl* manageTask = [[ManageTaskImpl alloc]
+                                  initWithTaskRepository:taskRepository
+                                  reminderService:reminderService];
 
     [manageTask deleteTaskWithId:@"100"];
     

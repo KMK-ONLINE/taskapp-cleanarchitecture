@@ -10,6 +10,7 @@
 #import "TaskDetailViewController.h"
 #import "ManageTask.h"
 #import "ManageTaskFactory.h"
+#import "SystemReminderService.h"
 
 @interface TaskDetailViewController()
 
@@ -48,6 +49,7 @@
 }
 
 -(void)dueDatePickingDone:(id) sender {
+    
     [self.viewModel changeDue:self.dueDatePicker.date];
     [self.dueTextField resignFirstResponder];
 }

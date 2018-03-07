@@ -11,6 +11,7 @@
 #import "TaskRepository.h"
 #import "ManageTaskImpl.h"
 #import "CoreDataTaskRepository.h"
+#import "SystemReminderService.h"
 
 @implementation ManageTaskFactory
 
@@ -20,7 +21,10 @@
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
         id<TaskRepository> taskRepository = [CoreDataTaskRepository new];
-        sharedInstance = [[ManageTaskImpl alloc] initWithTaskRepository:taskRepository];
+        id<ReminderService> reminderService = [SystemReminderService new];
+        
+        sharedInstance = [[ManageTaskImpl alloc] initWithTaskRepository:taskRepository
+                                                        reminderService:reminderService];
     });
     return sharedInstance;
 }

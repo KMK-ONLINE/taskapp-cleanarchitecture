@@ -37,6 +37,9 @@
 		F7AC56DC204E9EB400BDDE84 /* DueDateRenderer.m in Sources */ = {isa = PBXBuildFile; fileRef = F7AC56DB204E9EB400BDDE84 /* DueDateRenderer.m */; };
 		F7AC56DF204EAACD00BDDE84 /* TaskItemViewModelTest.m in Sources */ = {isa = PBXBuildFile; fileRef = F7AC56DE204EAACD00BDDE84 /* TaskItemViewModelTest.m */; };
 		F7AC56E2204F9DC800BDDE84 /* UIColor+Preset.m in Sources */ = {isa = PBXBuildFile; fileRef = F7AC56E1204F9DC800BDDE84 /* UIColor+Preset.m */; };
+		F7AC56E5204FC66A00BDDE84 /* TaskReminderPolicy.m in Sources */ = {isa = PBXBuildFile; fileRef = F7AC56E4204FC66A00BDDE84 /* TaskReminderPolicy.m */; };
+		F7AC56E9204FCDE400BDDE84 /* SystemReminderService.m in Sources */ = {isa = PBXBuildFile; fileRef = F7AC56E8204FCDE400BDDE84 /* SystemReminderService.m */; };
+		F7AC56EB204FD03600BDDE84 /* TaskReminderPolicyTest.m in Sources */ = {isa = PBXBuildFile; fileRef = F7AC56EA204FD03600BDDE84 /* TaskReminderPolicyTest.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -189,6 +192,12 @@
 		F7AC56DE204EAACD00BDDE84 /* TaskItemViewModelTest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TaskItemViewModelTest.m; sourceTree = "<group>"; };
 		F7AC56E0204F9D6B00BDDE84 /* UIColor+Preset.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIColor+Preset.h"; sourceTree = "<group>"; };
 		F7AC56E1204F9DC800BDDE84 /* UIColor+Preset.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Preset.m"; sourceTree = "<group>"; };
+		F7AC56E3204FC66A00BDDE84 /* TaskReminderPolicy.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TaskReminderPolicy.h; sourceTree = "<group>"; };
+		F7AC56E4204FC66A00BDDE84 /* TaskReminderPolicy.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TaskReminderPolicy.m; sourceTree = "<group>"; };
+		F7AC56E6204FCDA600BDDE84 /* ReminderService.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ReminderService.h; sourceTree = "<group>"; };
+		F7AC56E7204FCDE400BDDE84 /* SystemReminderService.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SystemReminderService.h; sourceTree = "<group>"; };
+		F7AC56E8204FCDE400BDDE84 /* SystemReminderService.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SystemReminderService.m; sourceTree = "<group>"; };
+		F7AC56EA204FD03600BDDE84 /* TaskReminderPolicyTest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TaskReminderPolicyTest.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -272,6 +281,7 @@
 				F7592511204016FB006C96CD /* ManageTaskTest.m */,
 				F759251D2043B7F3006C96CD /* TaskListViewModelTest.m */,
 				F7AC56DE204EAACD00BDDE84 /* TaskItemViewModelTest.m */,
+				F7AC56EA204FD03600BDDE84 /* TaskReminderPolicyTest.m */,
 			);
 			path = tasksTests;
 			sourceTree = "<group>";
@@ -291,6 +301,9 @@
 				A0B30B24203ADC3C00645AD6 /* Task.h */,
 				A0B30B25203ADC3C00645AD6 /* Task.m */,
 				F7592518204021EC006C96CD /* TaskRepository.h */,
+				F7AC56E3204FC66A00BDDE84 /* TaskReminderPolicy.h */,
+				F7AC56E4204FC66A00BDDE84 /* TaskReminderPolicy.m */,
+				F7AC56E6204FCDA600BDDE84 /* ReminderService.h */,
 			);
 			path = entity;
 			sourceTree = "<group>";
@@ -365,6 +378,8 @@
 			children = (
 				F70ADFEC2048F93E00EFE025 /* CoreDataTaskRepository.h */,
 				F70ADFED2048F93E00EFE025 /* CoreDataTaskRepository.m */,
+				F7AC56E7204FCDE400BDDE84 /* SystemReminderService.h */,
+				F7AC56E8204FCDE400BDDE84 /* SystemReminderService.m */,
 			);
 			path = adapter;
 			sourceTree = "<group>";
@@ -632,8 +647,10 @@
 			files = (
 				F7AC56E2204F9DC800BDDE84 /* UIColor+Preset.m in Sources */,
 				A0B30B26203ADC3C00645AD6 /* Task.m in Sources */,
+				F7AC56E9204FCDE400BDDE84 /* SystemReminderService.m in Sources */,
 				F75925222043B88C006C96CD /* TaskListViewModel.m in Sources */,
 				F70F7AA82043F47600692058 /* ManageTaskFactory.m in Sources */,
+				F7AC56E5204FC66A00BDDE84 /* TaskReminderPolicy.m in Sources */,
 				F70F7AA22043EE6A00692058 /* TaskTableViewCell.m in Sources */,
 				F759251520401889006C96CD /* TaskData.m in Sources */,
 				F7AC56DC204E9EB400BDDE84 /* DueDateRenderer.m in Sources */,
@@ -655,6 +672,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F7AC56EB204FD03600BDDE84 /* TaskReminderPolicyTest.m in Sources */,
 				F7AC56DF204EAACD00BDDE84 /* TaskItemViewModelTest.m in Sources */,
 				A0B30B23203ADBF800645AD6 /* TaskTest.m in Sources */,
 				F759251E2043B7F3006C96CD /* TaskListViewModelTest.m in Sources */,

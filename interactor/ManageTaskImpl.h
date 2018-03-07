@@ -10,9 +10,11 @@
 #import "TaskData.h"
 #import "ManageTask.h"
 #import "TaskRepository.h"
+#import "ReminderService.h"
 
 @interface ManageTaskImpl : NSObject<ManageTask>
 
--(instancetype)initWithTaskRepository: (id<TaskRepository>)taskRepository;
+-(instancetype)initWithTaskRepository:(id<TaskRepository>)taskRepository
+                      reminderService:(id<ReminderService>)reminderService;
 
 @end
