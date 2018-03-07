@@ -12,7 +12,7 @@
 
 @interface TaskItemViewModel : NSObject
 
-@property(nonatomic, strong) NSString* title;
+@property(nonatomic, strong) NSAttributedString* title;
 @property(nonatomic, assign) BOOL isCompleted;
 @property(nonatomic, strong) NSString* due;
 @property(nonatomic, strong) UIColor* backgroundColor;

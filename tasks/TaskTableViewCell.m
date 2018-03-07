@@ -15,7 +15,7 @@
 }
 
 -(void) setViewModel:(TaskItemViewModel*) viewModel {
-    self.textLabel.text = viewModel.title;
+    self.textLabel.attributedText = viewModel.title;
     [self setChecked:viewModel.isCompleted];
     self.detailTextLabel.text = viewModel.due;
     self.backgroundColor = viewModel.backgroundColor;

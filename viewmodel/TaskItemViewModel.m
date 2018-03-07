@@ -16,12 +16,29 @@
     self = [super init];
     if(!self) return self;
     
-    self.title = task.title;
+    self.title = task.isCompleted ?
+        [self renderWithCompletedStylingForTitle:task.title] :
+        [[NSAttributedString alloc] initWithString:task.title];
+    
     self.isCompleted = task.isCompleted;
     self.due = task.isOverdue ? @"Overdue" : [DueDateRenderer render:task.dueDate];
     self.backgroundColor = task.isOverdue ?  [UIColor lightRed] : UIColor.whiteColor;
-    
+
     return self;
+}
+
+#pragma mark -
+
+-(NSAttributedString*) renderWithCompletedStylingForTitle:(NSString*) title {
+
+    NSMutableAttributedString* completedTitle =
+    [[NSMutableAttributedString alloc] initWithString:title];
+    
+    [completedTitle addAttribute:NSStrikethroughStyleAttributeName
+                           value:@2
+                           range:NSMakeRange(0, completedTitle.length)];
+    
+    return completedTitle;
 }
 
 @end
