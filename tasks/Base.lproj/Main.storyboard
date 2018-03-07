@@ -62,6 +62,12 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <refreshControl key="refreshControl" opaque="NO" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" id="FAl-Yy-3Cs">
+                        <autoresizingMask key="autoresizingMask"/>
+                        <connections>
+                            <action selector="refresh:" destination="8l4-wg-P2G" eventType="valueChanged" id="fyt-34-uwu"/>
+                        </connections>
+                    </refreshControl>
                     <connections>
                         <segue destination="TZq-GJ-mHf" kind="show" identifier="openTask" id="hgA-iT-1FA"/>
                     </connections>

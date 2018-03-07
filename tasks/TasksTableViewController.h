@@ -11,5 +11,6 @@
 @interface TasksTableViewController : UITableViewController
 
 - (IBAction)addTask:(id)sender;
+- (IBAction)refresh:(UIRefreshControl*)sender;
 
 @end

@@ -77,6 +77,12 @@
     [self promptAndHandleAddTask];
 }
 
+- (IBAction)refresh:(UIRefreshControl*) refreshControl {
+    [self.viewModel refreshData];
+    [self.tableView reloadData];
+    [refreshControl endRefreshing];
+}
+
 #pragma mark - private
 
 -(void) promptAndHandleAddTask {
